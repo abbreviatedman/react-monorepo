@@ -1,8 +1,10 @@
-# What is React?
+# React and JSX
 
-ReactJS is a library to build active User Interfaces, thus rendering is one of the integral parts of React. React provides the developers with a package `react-dom` to access and modify the DOM. Let's see in brief the need for this package.
+## What is React?
 
-# What is the DOM and React's Virtual DOM?
+React JS is a library to build active User Interfaces. React provides the developers with a package `react-dom` to access and modify the DOM. Let's see in brief the need for this package.
+
+## What is the DOM and React's Virtual DOM?
 
 DOM, abbreviated as Document Object Model, is the logical representation of a webpage. In easier words, DOM is a tree-like structure that contains all the elements and properties of a website as nodes in the tree. DOM provides a language-neutral interface that allows accessing and updating of the content of any element of a webpage.
 
@@ -69,12 +71,11 @@ When you update the DOM, the browser has to re-render the entire page. This can 
 
 React uses a virtual DOM to improve performance. The virtual DOM is a lightweight copy of the actual DOM. React uses the virtual DOM to keep track of the changes that need to be made to the actual DOM. When a change is made to the virtual DOM, React compares the virtual DOM to the actual DOM and only updates the parts of the actual DOM that have changed. This makes React faster and more efficient than updating the entire DOM every time a change is made.
 
-
-# JSX
+## JSX
 
 React uses a syntax extension of JavaScript called JSX (which stands for JavaScript Extensible Markup Language) that allows us to write HTML content directly into our JavaScript code. This may seem strange at first but, it is great because it makes it easy to blend JavaScript logic with HTML; something that we do a lot in React. As you will see, JSX looks very similar to the HTML, but there are a few key differences that we will look at.
 
-## Creating a simple JSX element
+### Creating a simple JSX element
 
 In this example we are storing JSX element directly inside an JavaScript constant.
 
@@ -86,7 +87,7 @@ _Note: You can store JSX in `var` or `let` variables as well, but in React often
 
 We can also add JavaScript inside of JSX elements by including the JavaScript inside of `{` `}` curly braces.
 
-## JavaScript code inside JSX elements
+### JavaScript code inside JSX elements
 
 ```jsx
 let name = "Bob";
@@ -95,7 +96,7 @@ const heading = <h1>{name}'s Used Cars</h1>;
 
 This heading would show up in the browser as "Bob's Used Cars".
 
-## Comments inside JSX elements
+### Comments inside JSX elements
 
 Comments can also be added inside JSX elements.
 
@@ -108,7 +109,7 @@ const heading = (
 );
 ```
 
-## Self closing elements
+### Self closing elements
 
 JSX allows us to use self closing HTML elements such as `<img>`, `<br>`, `<hr>` to name a few. However when using these elements in JSX we must remember to always add a closing `/` slash in order to avoid syntax errors. So these would need to written as `<img />`, `<br />`, `<hr />` in JSX.
 
@@ -116,7 +117,7 @@ JSX allows us to use self closing HTML elements such as `<img>`, `<br>`, `<hr>` 
 const logo = <img src="..." alt="..." />;
 ```
 
-## Nesting JSX elements
+### Nesting JSX elements
 
 We can nest elements inside of others the same as you do in HTML.
 
@@ -144,7 +145,7 @@ const header = (
 );
 ```
 
-## Applying CSS class styles to JSX elements
+### Applying CSS class styles to JSX elements
 
 In JavaScript the `class` keyword is reserved by the language, so if you want to refer to a CSS class within a JSX element, then you must use the attribute `className` instead.
 
@@ -157,7 +158,7 @@ const intro = (
 );
 ```
 
-## Applying CSS inline styles to JSX elements
+### Applying CSS inline styles to JSX elements
 
 The `style` attribute allows us to add CSS inline styles directly to our JSX elements.
 
@@ -170,7 +171,7 @@ const intro = (
 );
 ```
 
-The `style` attribute accepts an object. the object is filled with key value pairs where the key is a CSS property name and the value is the value to set for that CSS property. Css properties with `-` hyphens in their name such as `font-size` are converted to camel case `fontSize`. number values can be provided as numbers but units that must include suffixes such as `px` or `em` must be written as strings `'fontSize: 1em'` as an example.
+The `style` attribute accepts an object. the object is filled with key value pairs where the key is a CSS property name and the value is the value to set for that CSS property. CSS properties with `-` hyphens in their name such as `font-size` are converted to camel case, as in `fontSize`. Number values can be provided as numbers, but units that must include suffixes such as `px` or `em` must be written as strings... `'fontSize: '1em'` as an example.
 
 We can also pass the style an object stored in another variable or constant.
 
