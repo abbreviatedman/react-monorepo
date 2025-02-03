@@ -122,7 +122,7 @@ export default App;
 22. Now that we know our App component can see our Article component, let's add some made up dummy data. This data often comes from a database, but for now we are just going to add it as a property of our component to make things simple. On `App.js`, inside your function, before the `return`, paste in the following code:
 
 ```javascript
-articles = [
+const articles = [
   {
     id: 1,
     title: "Taiwan's Hidden Treasures",

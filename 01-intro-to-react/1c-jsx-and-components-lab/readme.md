@@ -6,7 +6,7 @@
 
 We are going to make a goldfish forum website page by combining different components each making up a different part of the page content.
 
-## SeT Up a new Create-React-App project
+## Set Up a new Create-React-App project
 
 1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
 

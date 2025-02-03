@@ -26,10 +26,10 @@ Add an onClick function to each of the mapped elements so that the state of curr
 
 ### Bonuses
 
-- Style it. Make the FDNY glimmer like FIRE!!!!!
-
-![Elmo celebrating fire](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJoeWd2dzR1Ym55a3FqcXQ1aTAyMjVtaTUxYWk1OHJ4NWRsd3JuaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yr7n0u3qzO9nG/giphy.gif)
 
 - Allow the user to filter by borough. You can create some simple buttons with click listeners that change the state variable for your firehouses.
 - Sort the firehouses. Create a button with an event listener that sorts them by name.
 - Sort the firehouses by Engine/Ladder/Squad etc. number (whichever comes first).
+- Style it. Make the FDNY glimmer like FIRE!!!!!
+
+![Elmo celebrating fire](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJoeWd2dzR1Ym55a3FqcXQ1aTAyMjVtaTUxYWk1OHJ4NWRsd3JuaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yr7n0u3qzO9nG/giphy.gif)
