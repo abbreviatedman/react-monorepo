@@ -4,16 +4,18 @@
 
 We are going to build a weather-themed React application that demonstrates conditional rendering. This exercise will guide you through creating a toy app with various methods of conditional rendering to show different weather conditions like cloud cover, rain, and temperature. We'll also use Bootstrap to make our app look visually appealing.
 
-## Set Up a New Create-React-App Project
+## Set Up a New Vite Project
 
-1. Open VS Code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
-2. In Terminal, type `npx create-react-app weather-conditions-app`. Here we are naming our project `weather-conditions-app`. Wait while a new project is set up... It will display "Happy hacking!" when it's done.
-3. Then in Terminal, type `cd weather-conditions-app` to enter the project folder.
-3a. **Fix the current create-react-app bug** by typing `npm install web-vitals` in the terminal. This will install the missing dependency.
+1. Open VS Code and then open the terminal with in the `exercise` directory by right-clicking on this `readme.md` file and selecting **Open in Integrated Terminal**.
+2a. In Terminal, type `npm vite weather-conditions-app` followed by return. Here we are naming our project `weather-conditions-app`. 
+2b. It may prompt you if you want to install Vite. You can hit return, confirming first that it says `vite` and not a misspelling.
+2c. It will prompt you to "Select a Framework". Choose React.
+2d. It will prompt you to "Select a Variant". Choose JavaScript.
+3. Then open the folder in VS Code by choosing File -> Open Folder and selecting the folder `weather-conditions-app`.
 
 ## Install Bootstrap
 
-4. Next, let's import Bootstrap, a front-end framework that provides CSS code to make our project beautiful. In Terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
+4. Next, let's import Bootstrap, a front-end framework that provides CSS code to make our project beautiful. Launch a new terminal using Terminal -> New Terminal or using Ctrl+`. In your terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
 ## Import Bootstrap
 
@@ -21,7 +23,7 @@ We are going to build a weather-themed React application that demonstrates condi
 
 ## Start Node Test Server
 
-6. In Terminal, type `npm start` to start a node test server. This should open a new tab in your browser to **localhost:3000**.
+6. In Terminal, type `npm run dev` to start a node server. This should give you a message that the Local is **localhost:5173**. This is a clickable link to open it in your default browser, but you can go to the URL manually if you prefer.
 
 ## Creating the App Component
 
