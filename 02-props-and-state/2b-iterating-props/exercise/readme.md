@@ -24,7 +24,7 @@ We are going to make an archive page for a blog site that displays a list of rec
 
 ## Import Bootstrap
 
-6. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
+6. Then in VS Code, open the **/src/main.jsx** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
 
 ## Exercise Assets
 
@@ -32,7 +32,7 @@ We are going to make an archive page for a blog site that displays a list of rec
 
 ## Creating the App Component
 
-8. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import React and create a functional component named `App`. Don't forget to export it.
+8. Open **/src/App.jsx**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import React and create a functional component named `App`. Don't forget to export it.
 
 9. Create a `<div>` inside of the `return()` statement.
 
@@ -60,7 +60,7 @@ function App() {
 
 12. Save the file and visit the browser to make sure our heading is appearing.
 
-13. Back inside **/src/App.js** below our heading place `<div className="row"></div>`.
+13. Back inside **/src/App.jsx** below our heading place `<div className="row"></div>`.
 
 ```jsx
 function App() {
@@ -75,9 +75,9 @@ function App() {
 
 ## Creating the Article Component
 
-14. In VS Code in the File Explorer to the left right click on the **/src/** folder and select **New File**. Name the file `Article.js`.
+14. In VS Code in the File Explorer to the left right click on the **/src/** folder and select **New File**. Name the file `Article.jsx`.
 
-15. Open **/src/Article.js** and import React.
+15. Open **/src/Article.jsx** and import React.
 
 16. Create a function called `Article` that returns a `<div>` inside of parentheses. Don't forget to export the function at the bottom of the file.
 
@@ -93,7 +93,7 @@ function Article() {
 export default Article;
 ```
 
-19. Let's try to import this Article into our App component. Open **/src/App.js** again and after we import React create a new line to import our Article `import Article from './Article';`. Also import the App.css with `import './App.css';`
+19. Let's try to import this Article into our App component. Open **/src/App.jsx** again and after we import React create a new line to import our Article `import Article from './Article';`. Also import the App.css with `import './App.css';`
 
 20. Then inside of the `<div className="row">` refer to your Article component as `<Article />`.
 
@@ -119,7 +119,7 @@ export default App;
 
 ## Adding Prop Data
 
-22. Now that we know our App component can see our Article component, let's add some made up dummy data. This data often comes from a database, but for now we are just going to add it as a property of our component to make things simple. On `App.js`, inside your function, before the `return`, paste in the following code:
+22. Now that we know our App component can see our Article component, let's add some made up dummy data. This data often comes from a database, but for now we are just going to add it as a property of our component to make things simple. On `App.jsx`, inside your function, before the `return`, paste in the following code:
 
 ```javascript
 const articles = [
@@ -228,7 +228,7 @@ function App() {
 
 We must pass the `key=""` attribute a unique label, we decided to use the id property that is found inside each element of the articles array.
 
-26. Head back to **/src/Article.js**. Let's remove the text that says "Hello I'm An Article!" and replace it with 3 elements an `<img>` image, `<h2>` a heading, and a `<p>` paragraph.
+26. Head back to **/src/Article.jsx**. Let's remove the text that says "Hello I'm An Article!" and replace it with 3 elements an `<img>` image, `<h2>` a heading, and a `<p>` paragraph.
 
 ```jsx
 function Article(props) {
@@ -250,7 +250,7 @@ export default Article;
 <img className="img-fluid" src={props.content.img} alt="featured" />
 ```
 
-If you are not sure what to type to get to a particular property you can always look over the articles array again that is inside **/src/App.js**
+If you are not sure what to type to get to a particular property you can always look over the articles array again that is inside **/src/App.jsx**
 
 28. For the heading we will reference the `title` property.
 
@@ -264,7 +264,7 @@ If you are not sure what to type to get to a particular property you can always 
 <p>{props.content.body}</p>
 ```
 
-Here is the completed code for Article.js
+Here is the completed code for Article.jsx
 
 ```jsx
 function Article(props) {
@@ -280,7 +280,7 @@ function Article(props) {
 export default Article;
 ```
 
-Here is the finished code for App.js
+Here is the finished code for App.jsx
 
 ```jsx
 import Article from "./Article";
