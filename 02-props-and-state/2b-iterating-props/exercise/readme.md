@@ -325,4 +325,87 @@ export default App;
 
 30. Save all your files and check in the browser. You should A travel blog site page that has a heading and three columns one for each article.
 
-31. Congrats! You're done.
+## Passing The Array As A Prop
+
+It's very common to have a parent component get data from an API call and then pass it down to its children. Let's practice that.
+
+First, let's create an intermediate component: the `ArticleList`.
+
+31. Create a file called `ArticleList.jsx` to render the articles it's passed.
+
+32. In `ArticleList.jsx`, import Article.
+
+``` jsx
+import Article from "./Article";
+```
+
+33. Create a functional component called `ArticleList` that takes a prop called `articles` and export it.
+
+``` jsx
+function ArticleList(props) {
+}
+
+export default ArticleList;
+```
+
+34. Inside the `ArticleList` component, use the `map` function to render an `Article` component for each article in the `articles` prop.
+
+``` jsx
+function ArticleList(props) {
+  return (
+	<div className="row">
+	  {props.articles.map((article) => (
+		<Article key={article.id} content={article} />
+	  ))}
+	</div>
+  );
+}
+```
+
+35. In `App.jsx`, import `ArticleList`. You can optionally but ideally remove the `Article` import.
+
+``` jsx
+import ArticleList from "./ArticleList";
+```
+
+36. In `App.jsx`, replace the `Article` component with the `ArticleList` component. Pass the `articles` array as a prop.
+
+``` jsx
+import ArticleList from "./ArticleList";
+
+function App() {
+  let articles = [
+	{
+	  id: 1,
+	  title: "Taiwan's Hidden Treasures",
+	  body: "You could spend months exploring Taiwan's Buddhist temples, villages, cities, and mountains and still barely scratch the surface of all the island has to offer.",
+	  img: "/taiwan.jpg",
+	},
+	{
+	  id: 2,
+	  title: "High Culture In Sao Paulo",
+	  body: "The largest city in South America, Sao Paulo's cuisine and art is as multinational as its diverse population of ten million people.",
+	  img: "/sao-paulo.jpg",
+	},
+	{
+	  id: 3,
+	  title: "Bonaire Is Scuba Heaven",
+	  body: "Bonaire is one of the top diving destinations in the world. Known as the shore dive capital of the world, it has great accessibility to its reefs.",
+	  img: "/bonaire.jpg",
+	},
+  ];
+
+  return (
+	<div className="App container-fluid">
+	  <h1>My Travel Blog</h1>
+	  <ArticleList articles={articles} />
+	</div>
+  );
+}
+
+export default App;
+```
+
+37. Save all your files and check in the browser. You should see the same travel blog site page that has a heading and three columns one for each article.
+
+38. Congrats! You're done.
