@@ -1,5 +1,11 @@
 # Iterating Through Props
 
+## Why Iterate Through Props?
+
+Most apps have some form of data in a list that needs to be displayed one after another. This data could be a list of products, a list of blog posts, a list of comments, or any other type of list. In React, you can pass this data as props to a component and then iterate through the props to display the data in a list format.
+
+This is a common pattern in React, and there are several ways to iterate through props. In this lesson, we'll explore three different methods for doing so.
+
 ## Method 1: Creating An Array of Elements
 
 ### Step 1: Set Up the Project
@@ -68,7 +74,7 @@ function ProductList() {
 export default ProductList;
 ```
 
-### Step 2: Update the App Component to Use ProductList
+### Step 2: Update the App Component to Use `ProductList`
 
 Update `src/App.js` to use the new `ProductList` component:
 
@@ -132,7 +138,7 @@ function AlienList() {
 export default AlienList;
 ```
 
-### Step 2: Update the App Component to Use AlienList
+### Step 2: Update the App Component to Use `AlienList`
 
 Update `src/App.js` to use the new `AlienList` component:
 
