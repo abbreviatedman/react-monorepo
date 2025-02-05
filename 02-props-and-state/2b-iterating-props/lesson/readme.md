@@ -8,14 +8,6 @@ This is a common pattern in React, and there are several ways to iterate through
 
 ## Method 1: Creating An Array of Elements
 
-### Step 1: Set Up the Project
-
-- Use command `npx create-react-app iteration-example`
-- Navigate into the folder with `cd iteration-example`
-- Start up the server with `npm start`
-
-### Step 2: Create the App Component with An Array of Elements
-
 Replace the contents of `src/App.jsx` with the following:
 
 ```jsx

@@ -51,12 +51,6 @@ This would output `Hey Rick, You are 73 years old.`
 
 This is exactly how props work in React. When you pass data into a component, you pass it as key-value pairs, and when you access that data inside the component, you access it as a single object. We could call this object whatever we want--it's our function and our parameter name, after all--but the convention is to call it `props`.
 
-## Setup
-
-- Use command `npx create-react-app props`
-- Navigate into the folder with `cd props`
-- Start up the server with `npm start`
-
 ## Props and components
 
 Let's say we have a main parent component called App and we would like to nest a Greeting component inside of it and change the greeting for different users based on their name. The component can stay the same but the props we pass into it can change dynamically. Let's explore this using components:

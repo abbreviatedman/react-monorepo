@@ -1,3 +1,22 @@
+# State And Props Assignment - Firehouse
+
+## Set Up And Run A New React App
+
+1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
+
+2. In the terminal, type `npm create vite task-manager-app`. Here we are naming our project task-manager-app.
+
+3. Choose React and then JavaScript from the menus, using arrow keys and Enter/Return.
+
+4. Now you want to either:
+
+- change directory to the new project folder by typing `cd task-manager-app` in the terminal
+- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the task-manager-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
+
+5. Install dependencies by entering `npm install` in the terminal.
+
+6. Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
+
 # Fire! Fire! Fire!
 
 ![bill hader](https://media1.giphy.com/media/3orieLZelMyxenarwQ/giphy.gif)

@@ -6,13 +6,22 @@
 
 We are going to make an archive page for a blog site that displays a list of recent articles.
 
-## Set Up A New Create-React-App Project
+## Set Up And Run A New React App
 
-1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
+1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
-2. In Terminal type `npx create-react-app travel-blog`. Here we are naming our project travel-blog. Wait while a new project is setup... It will display "Happy hacking!" when it's done.
+2. In the terminal, type `npm create vite blog-app`. Here we are naming our project blog-app.
 
-3. Then in Terminal type `cd travel-blog` to enter the project folder.
+3. Choose React and then JavaScript from the menus, using arrow keys and Enter/Return.
+
+4. Now you want to either:
+
+- change directory to the new project folder by typing `cd blog-app` in the terminal
+- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the blog-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
+
+5. Install dependencies by entering `npm install` in the terminal.
+
+6. Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ## Install Bootstrap
 
