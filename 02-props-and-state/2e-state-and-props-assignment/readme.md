@@ -79,6 +79,25 @@ You may make additional components for the bonus tasks if you wish.
 
 **Check**: You should see either a prompt to select a house or the details of the selected house rendered in the browser.
 
+## Step 4: Manage State in `App.jsx`
+
+1. **State Management**:
+   - Create two pieces of state using `useState`:
+     - `house`: This will store the currently selected house.
+     - `houses`: This will store the list of houses from the `firehouse.json` file--this will be useful if you want to add a filter or sort feature later, and it's also the model we'd want to use if we were getting the data from an API.
+
+2. **State Initialization**:
+   - Initialize the `house` state to `null`.
+   - Initialize the `houses` state with the `firehouses` data.
+
+3. **Functions**:
+   - `selectHouse(house)`: Change this function from logging to updating the `house` state with its argument.
+
+4. **Pass State and Functions as Props**:
+   - Pass the `house` state to the `CurrentHouse` component as a prop.
+   - Pass the `houses` state and `selectHouse` function to the `HouseList` component as props.
+
+**Check**: You should see the list of houses rendered in the browser. Clicking on any house name should update the selected house, and the details of the selected house should be displayed.
 
 ### Bonuses
 
