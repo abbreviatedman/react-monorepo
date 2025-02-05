@@ -16,7 +16,7 @@ This is a common pattern in React, and there are several ways to iterate through
 
 ### Step 2: Create the App Component with An Array of Elements
 
-Replace the contents of `src/App.js` with the following:
+Replace the contents of `src/App.jsx` with the following:
 
 ```jsx
 import "./App.css";
@@ -49,7 +49,7 @@ Instead of manually mapping over the array, we could, of course, use JavaScript'
 
 ### Step 1: Create the ProductList Component
 
-Create a new component `ProductList.js` in the `src` folder:
+Create a new component `ProductList.jsx` in the `src` folder:
 
 ```jsx
 import React from 'react';
@@ -76,7 +76,7 @@ export default ProductList;
 
 ### Step 2: Update the App Component to Use `ProductList`
 
-Update `src/App.js` to use the new `ProductList` component:
+Update `src/App.jsx` to use the new `ProductList` component:
 
 ```jsx
 import "./App.css";
@@ -111,7 +111,7 @@ Since a `.map` is an expression, we can put it directly into the JSX. This appro
 
 ### Step 1: Create the AlienList Component
 
-Create a new component `AlienList.js` in the `src` folder:
+Create a new component `AlienList.jsx` in the `src` folder:
 
 ```jsx
 import React from 'react';
@@ -140,7 +140,7 @@ export default AlienList;
 
 ### Step 2: Update the App Component to Use `AlienList`
 
-Update `src/App.js` to use the new `AlienList` component:
+Update `src/App.jsx` to use the new `AlienList` component:
 
 ```jsx
 import "./App.css";

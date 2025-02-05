@@ -18,7 +18,7 @@ In terminal type npm start to start a node test server. This should open a new t
 
 ## Creating the App Component
 
-Open `/src/App.js`. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file, you can create a functional component named App. Don't forget to export it.
+Open `/src/App.jsx`. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file, you can create a functional component named App. Don't forget to export it.
 
 Create a `<div>` inside of the return() statement.
 
@@ -26,13 +26,13 @@ Then inside the <div> create a heading <h1>Favorite Movies and Actors</h1>.
 
 Save the file and visit the browser to make sure our heading is appearing.
 
-Back inside /src/App.js below our <h1> heading, place a <div></div>.
+Back inside /src/App.jsx below our <h1> heading, place a <div></div>.
 
 ## Creating the Movie Component
 
-In VS Code, in the File Explorer to the left, right-click on the /src/ folder and select New File. Name the file Movie.js.
+In VS Code, in the File Explorer to the left, right-click on the /src/ folder and select New File. Name the file Movie.jsx.
 
-Open /src/Movie.js and import React.
+Open /src/Movie.jsx and import React.
 
 Create a function called Movie that returns a <div> inside of parentheses. Don't forget to export the function at the bottom of the file.
 
@@ -40,9 +40,9 @@ Inside the div, let's write some placeholder text: "Hello, I'm a Movie!".
 
 ## Creating the Actor Component
 
-In VS Code, in the File Explorer to the left, right-click on the /src/ folder and select New File. Name the file Actor.js.
+In VS Code, in the File Explorer to the left, right-click on the /src/ folder and select New File. Name the file Actor.jsx.
 
-Open /src/Actor.js and import React.
+Open /src/Actor.jsx and import React.
 
 Create a function called Actor that returns a <div> inside of parentheses. Don't forget to export the function at the bottom of the file.
 
@@ -50,7 +50,7 @@ Inside the div, let's write some placeholder text "Hello, I'm an Actor!".
 
 ## Importing the Components
 
-Open /src/App.js again and create a new line to import our Movie and Actor components with import Movie from './Movie'; and import Actor from './Actor';.
+Open /src/App.jsx again and create a new line to import our Movie and Actor components with import Movie from './Movie'; and import Actor from './Actor';.
 
 Then inside of the <div>, render your Movie and Actor components using <Movie /> and <Actor />.
 
@@ -58,7 +58,7 @@ Save and check the browser. You should see the text "Hello, I'm a Movie!" and "H
 
 ## Adding Primitive Data
 
-Let's add some favorite movie titles as primitive data. In App.js, inside your function, before the return, paste in the following code:
+Let's add some favorite movie titles as primitive data. In App.jsx, inside your function, before the return, paste in the following code:
 
 ``` javascript
 const movie1 = "Inception";
@@ -96,7 +96,7 @@ Pass the movie titles as props to the Movie component. Render the Movie componen
 
 ## Updating the Movie Component
 
-Right now, the Movie component still isn't rendering the movie title. Head back to /src/Movie.js. Let's remove the text that says "Hello, I'm a Movie!" and replace it with an <h2> element to display the movie title passed via props.
+Right now, the Movie component still isn't rendering the movie title. Head back to /src/Movie.jsx. Let's remove the text that says "Hello, I'm a Movie!" and replace it with an <h2> element to display the movie title passed via props.
 
 ``` jsx
 function Movie(props) {
@@ -112,7 +112,7 @@ export default Movie;
 
 ## Adding Object Data
 
-Now let's add some favorite actors as object data. In App.js, inside your function, before the return, paste in the following code:
+Now let's add some favorite actors as object data. In App.jsx, inside your function, before the return, paste in the following code:
 
 ```javascript
 const actor1 = { id: 1, name: "Leonardo DiCaprio", age: 46 };
@@ -142,14 +142,14 @@ export default App;
 
 ## Updating the Actor Component
 
-Again, the Actor component still isn't rendering the actor's name and age. Head back to /src/Actor.js. Let's remove the text that says "Hello, I'm an Actor!" and replace it with an <h2> element to display the actor's name and a <p> element to display the actor's age.
+Again, the Actor component still isn't rendering the actor's name and age. Head back to /src/Actor.jsx. Let's remove the text that says "Hello, I'm an Actor!" and replace it with an <h2> element to display the actor's name and a <p> element to display the actor's age.
 
 
 ## Solution Code
 
 Try to complete the exercise on your own. If you get stuck, you can refer to the solution code below.
 
-Here is the finished code for App.js:
+Here is the finished code for App.jsx:
 
 ```jsx
 import Movie from "./Movie";
@@ -182,7 +182,7 @@ function App() {
 export default App;
 ```
 
-Here is the finished code for Movie.js:
+Here is the finished code for Movie.jsx:
 
 ```jsx
 function Movie(props) {
@@ -196,7 +196,7 @@ function Movie(props) {
 export default Movie;
 ```
 
-Here is the finished code for Actor.js:
+Here is the finished code for Actor.jsx:
 
 ```jsx
 function Actor(props) {
