@@ -75,7 +75,7 @@ You may make additional components for the bonus tasks if you wish.
 
 2. **Render the `CurrentHouse` Component in `App.jsx`**:
    - Import the `CurrentHouse` component into `App.jsx`.
-   - Render the `CurrentHouse` component in `App.jsx` at the top with a sample selected house object.
+   - Render the `CurrentHouse` component in `App.jsx` at the top with a single house from anywhere in the array.
 
 **Check**: You should see either a prompt to select a house or the details of the selected house rendered in the browser.
 
