@@ -37,12 +37,12 @@ You may make additional components for the bonus tasks if you wish.
    - Create a new file named `House.jsx`.
    - This component should receive a `house` object and a `selectHouse` function as props. Remember that they'll be on `props.house` and `props.selectHouse` respectively.
    - Render the house name inside a list item (`<li>`).
-   - Add an `onClick` event to the house name that calls the `selectHouse` function with the `house` object as an argument. You'll need to use an anonymous function in order to pass the `house` to `selectHouse`.
+   - Add an `onClick` event to the house name that calls the `selectHouse` function with the `house` object as an argument. You'll need to use an anonymous function in order to pass the `house` to `selectHouse`. Remember that those values are on `props.house` and `props.selectHouse`.
 
 2. **Render a `House` Component in `App.jsx`**:
    - Import the `House` component into `App.jsx`.
    - Import the `firehouse.json` data. If you have `firehouse.json` in the `src` folder, you can use the following line to do so: `import firehouses from "./firehouse.json";`
-   - Create a `selectHouse` function in `App.jsx` that, for now, just logs the selected house to the console.
+   - Create a `selectHouse` function in `App.jsx` that, for now, just logs its argument to the console.
    - Render a single `House` component in `App.jsx`, passing it a sample house object (maybe the first house in the array) and the `selectHouse` function as props.
 
 **Check**: You should see the name of the house rendered in the browser. Clicking on the house name should call the `selectHouse` function (you can confirm this with a `console.log` statement).
