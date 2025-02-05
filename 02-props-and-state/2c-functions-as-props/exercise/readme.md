@@ -8,14 +8,28 @@ We are going to create a simple task manager application that displays a list of
 
 1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
-2. In the terminal, type `npm create vite task-manager-app`. Here we are naming our project task-manager-app.
+2. In the terminal, type `npm create vite blog-app`. Here we are naming our project blog-app.
 
 3. Choose React and then JavaScript from the menus, using arrow keys and Enter/Return.
 
 4. Now you want to either:
 
-- change directory to the new project folder by typing `cd task-manager-app` in the terminal
-- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the task-manager-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
+- change directory to the new project folder by typing `cd blog-app` in the terminal
+- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the blog-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
+
+5. Install dependencies by entering `npm install` in the terminal.
+
+6. Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
+
+## Set Up And Run A New React App
+
+1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
+
+2. In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
+
+3. It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+4. Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
 5. Install dependencies by entering `npm install` in the terminal.
 

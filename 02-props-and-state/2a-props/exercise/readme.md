@@ -8,14 +8,11 @@ We are going to create a page that displays a list of favorite movies and actors
 
 1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
-2. In the terminal, type `npm create vite movie-actor-app`. Here we are naming our project movie-actor-app.
+2. In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-3. Choose React and then JavaScript from the menus, using arrow keys and Enter/Return.
+3. It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
 
-4. Now you want to either:
-
-- change directory to the new project folder by typing `cd movie-actor-app` in the terminal
-- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the movie-actor-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
+4. Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
 5. Install dependencies by entering `npm install` in the terminal.
 
