@@ -54,8 +54,6 @@ This is a more complex example where we pass a function as a prop to a child com
 This will become far more common when we start using React state in our components.
 
 ``` jsx
-import React from 'react';
-
 function ClickButton(props) {
   return (
     <button onClick={props.handleClick}>
@@ -85,8 +83,6 @@ export default ClickStateApp;
 In this example, we pass a function as a prop to a child component that will change the style of the parent component.
 
 ``` jsx
-import React from 'react';
-
 function ChangeStyle(props) {
   return (
     <p onMouseOver={props.handleHover}>
