@@ -98,7 +98,6 @@ You may make additional components for the bonus tasks if you wish.
 
 ### Bonuses
 
-
 - Allow the user to filter by borough. You can create some simple buttons with click listeners that change the state variable for your firehouses. The click listeners should live in App.jsx, so that they can change state. You should also have a function to reset the firehouses back to their original state.
 - Sort the firehouses. Create a button with an event listener that sorts them by name. That listener should live in App.jsx, and you should have a function to reset the sorting back to the original state.
 - Sort the firehouses by Engine/Ladder/Squad etc. number (whichever comes first).
