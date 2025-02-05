@@ -54,6 +54,7 @@ You may make additional components for the bonus tasks if you wish.
 	- This component should receive a list of houses and a `selectHouse` function as props.
 	- Iterate over the list of houses and render a `House` component for each house.
 	- Pass the `house` object and `selectHouse` function as props to each `House` component.
+	- You'll also want to add a key to each `House` component. The `FacilityName` of each house object is a good candidate for this.
 
 2. **Render the `HouseList` Component in `App.jsx`**:
 	- Remove the rendering of the single sample house from the previous step.
@@ -68,13 +69,13 @@ You may make additional components for the bonus tasks if you wish.
    - Create a new file named `CurrentHouse.jsx`.
    - This component should receive the currently selected `house` as a prop.
    - If no house is selected (`props.house` is `null`), render a message prompting the user to select a house.
-   - If a house is selected, render the details of the selected house, in a similar way to the `House` component, but perhaps with a border around it to make it stand out.
+   - If a house is selected, render the details of the selected house, with not only the name but also the address and borough.
 
 2. **Render the `CurrentHouse` Component in `App.jsx`**:
    - Import the `CurrentHouse` component into `App.jsx`.
    - Render the `CurrentHouse` component in `App.jsx` at the top with a single house from anywhere in the array.
 
-**Check**: You should see either a prompt to select a house or the details of the selected house rendered in the browser.
+**Check**: You should see the details of the selected house rendered in the browser. If you change the prop you pass to `CurrentHouse` in `App.jsx` to `null`, you should see the message prompting the user to select a house.
 
 ## Step 4: Manage State in `App.jsx`
 
@@ -94,7 +95,7 @@ You may make additional components for the bonus tasks if you wish.
    - Pass the `house` state to the `CurrentHouse` component as a prop.
    - Pass the `houses` state and `selectHouse` function to the `HouseList` component as props.
 
-**Check**: You should see the list of houses rendered in the browser. Clicking on any house name should update the selected house, and the details of the selected house should be displayed.
+**Check**: You should still see the list of houses rendered in the browser. Clicking on any house name should update the selected house, and the details of the selected house should be displayed.
 
 ### Bonuses
 
