@@ -1,54 +1,91 @@
 # State And Props Assignment - Firehouse
 
+In this assignment, you will build a simple React application that displays a list of firehouses and shows details of the selected firehouse. You will practice managing state in React and passing data between components using props.
+
 ## Set Up And Run A New React App
 
 1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
-2. In the terminal, type `npm create vite task-manager-app`. Here we are naming our project task-manager-app.
+2. In the terminal, type `npm create vite firehouse-app`. Here we are naming our project firehouse-app.
 
 3. Choose React and then JavaScript from the menus, using arrow keys and Enter/Return.
 
 4. Now you want to either:
 
-- change directory to the new project folder by typing `cd task-manager-app` in the terminal
-- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the task-manager-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
+- change directory to the new project folder by typing `cd firehouse-app` in the terminal
+- or, **preferably**, open the project folder in VS Code by choosing File > Open Folder from the menus and selecting the firehouse-app folder, then open the terminal with Terminal > New Terminal from the menus (or Ctrl+`).
 
 5. Install dependencies by entering `npm install` in the terminal.
 
 6. Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
-# Fire! Fire! Fire!
+## Move Data Into The Project
 
-![bill hader](https://media1.giphy.com/media/3orieLZelMyxenarwQ/giphy.gif)
+Our `firehouses.json` file is in the `data` folder in this directory. You will need to move this file into the `src` folder of your new project. **It's also recommended that you move this readme into the new project folder.**
 
-The real estate market is hot, but we need to make sure it doesn't burn down to the ground. How can we best do that? Let's compile a list of all the firehouses in NYC to make sure that we can keep an eye on things. Oh, and let's build it in React, because everyone knows that Mark Zuckerberg is in cahoots with the FDNY.
+## Components
 
-### Step 1
+You will work with the following components:
 
-Use our old friend `create-react-app` to create a react app.
+1. `App.jsx`
+2. `House.jsx`
+3. `HouseList.jsx`
+4. `CurrentHouse.jsx`
 
-### Step 2
+You may make additional components for the bonus tasks if you wish.
 
-Let's create two components, `House.js` and `HouseList.js`. Be sure to manage your state in App.js.
+## Step 1: Create and Render the `House` Component
 
-In `App.js`, Create 2 properties in state, `firehouses` and `currentHouse`. Import all of the firehouses and save them in state as `firehouses`. We can find all of the firehouse data in the provided json file `firehouses.json`. (If you don't know how to import JSON, the answer is a friendly internet search away. You can make importing it easier by moving `firehouses` to the `src` folder.) Leave `currentHouse` as `null` for now. Let's also create a function that takes in one firehouse as an argument and updates the `currentHouse` state.
+1. **Create the `House` Component**:
+   - Create a new file named `House.jsx`.
+   - This component should receive a `house` object and a `selectHouse` function as props. Remember that they'll be on `props.house` and `props.selectHouse` respectively.
+   - Render the house name inside a list item (`<li>`).
+   - Add an `onClick` event to the house name that calls the `selectHouse` function with the `house` object as an argument. You'll need to use an anonymous function in order to pass the `house` to `selectHouse`.
 
-### Step 3
+2. **Render a `House` Component in `App.jsx`**:
+   - Import the `House` component into `App.jsx`.
+   - Import the `firehouse.json` data. If you have `firehouse.json` in the `src` folder, you can use the following line to do so: `import firehouses from "./firehouse.json";`
+   - Create a `selectHouse` function in `App.jsx` that, for now, just logs the selected house to the console.
+   - Render a single `House` component in `App.jsx`, passing it a sample house object (maybe the first house in the array) and the `selectHouse` function as props.
 
-`House.js` should be a component that is meant to display the full details of one fire house. In `House.js`, pass the current house as props down and render it to the component IF there is a `currentHouse`. Else, render the words "Select A House"
+**Check**: You should see the name of the house rendered in the browser. Clicking on the house name should call the `selectHouse` function (you can confirm this with a `console.log` statement).
 
-### Step 4
+## Step 2: Create and Render the `HouseList` Component
 
-In `HouseList.js` pass the props of all the firehouses and map over them to render a list of every house. Only display the "FacilityName" property.
+1. **Create the `HouseList` Component**:
+	- Create a new file named `HouseList.jsx`.
+	- This component should receive a list of houses and a `selectHouse` function as props.
+	- Iterate over the list of houses and render a `House` component for each house.
+	- Pass the `house` object and `selectHouse` function as props to each `House` component.
 
-Add an onClick function to each of the mapped elements so that the state of current house is updated to the firehouse that is clicked.
+2. **Render the `HouseList` Component in `App.jsx`**:
+	- Remove the rendering of the single sample house from the previous step.
+	- Import the `HouseList` component into `App.jsx`.
+	- Render the `HouseList` component in `App.jsx` with the following 2 props: the full list of houses from the `firehouse.json` file and the `selectHouse` function as props.
+
+**Check**: You should see a list of houses rendered in the browser. Clicking on any house name should call the `selectHouse` function (you can confirm this with a `console.log` statement).
+
+## Step 3: Create and Render the `CurrentHouse` Component
+
+1. **Create the `CurrentHouse` Component**:
+   - Create a new file named `CurrentHouse.jsx`.
+   - This component should receive the currently selected `house` as a prop.
+   - If no house is selected (`props.house` is `null`), render a message prompting the user to select a house.
+   - If a house is selected, render the details of the selected house, in a similar way to the `House` component, but perhaps with a border around it to make it stand out.
+
+2. **Render the `CurrentHouse` Component in `App.jsx`**:
+   - Import the `CurrentHouse` component into `App.jsx`.
+   - Render the `CurrentHouse` component in `App.jsx` at the top with a sample selected house object.
+
+**Check**: You should see either a prompt to select a house or the details of the selected house rendered in the browser.
+
 
 ### Bonuses
 
 
-- Allow the user to filter by borough. You can create some simple buttons with click listeners that change the state variable for your firehouses.
-- Sort the firehouses. Create a button with an event listener that sorts them by name.
+- Allow the user to filter by borough. You can create some simple buttons with click listeners that change the state variable for your firehouses. The click listeners should live in App.jsx, so that they can change state. You should also have a function to reset the firehouses back to their original state.
+- Sort the firehouses. Create a button with an event listener that sorts them by name. That listener should live in App.jsx, and you should have a function to reset the sorting back to the original state.
 - Sort the firehouses by Engine/Ladder/Squad etc. number (whichever comes first).
-- Style it. Make the FDNY glimmer like FIRE!!!!!
+- Style the app. Feel free to use Bootstrap or another component library, but, either way, make the FDNY glimmer like FIRE!!!!!
 
 ![Elmo celebrating fire](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJoeWd2dzR1Ym55a3FqcXQ1aTAyMjVtaTUxYWk1OHJ4NWRsd3JuaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yr7n0u3qzO9nG/giphy.gif)
