@@ -4,7 +4,7 @@ In this assignment, you will build a simple React application that displays a li
 
 ## Set Up And Run A New React App
 
-1. Open the terminal to the `2e-state-and-props-assignment` directory--the simplest way to do so is to right-click on the `2e-state-and-props-assignment` folder in VS Code and select "Open in Integrated Terminal".
+1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
 2. In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
@@ -43,7 +43,7 @@ You may make additional components for the bonus tasks if you wish.
 2. **Render a `House` Component in `App.jsx`**:
    - Import the `House` component into `App.jsx`.
    - Import the `firehouses.json` data. If you have `firehouses.json` in the `src` folder, you can use the following line to do so: `import firehouses from "./firehouses.json";`
-   - Create a `selectHouse` function in `App.jsx` that, for now, just logs its argument to the console.
+   - Create a `selectHouse` function in `App.jsx` that, for now, just logs a house (its argument) to the console.
    - Render a single `House` component in `App.jsx`, passing it a sample house object (maybe the first house in the array) and the `selectHouse` function as props.
 
 **Check**: You should see the name of the house rendered in the browser. Clicking on the house name should call the `selectHouse` function (you can confirm this with a `console.log` statement).
@@ -52,17 +52,18 @@ You may make additional components for the bonus tasks if you wish.
 
 1. **Create the `HouseList` Component**:
 	- Create a new file named `HouseList.jsx`.
-	- This component should receive a list of houses and a `selectHouse` function as props.
+	- Create a functional component in it. Don't forget to export!
+	- Import the `House` component.
+	- Our `HouseList` component will receive a list of houses and a `selectHouse` function as props, once we're rendering it. We can use those props in this component, but we don't have to make them--they'll be passed in when we render this component.
 	- Iterate over the list of houses and render a `House` component for each house.
 	- Pass the `house` object and `selectHouse` function as props to each `House` component.
-	- You'll also want to add a key to each `House` component. The `FacilityName` of each house object is a good candidate for this.
 
 2. **Render the `HouseList` Component in `App.jsx`**:
 	- Remove the rendering of the single sample house from the previous step.
 	- Import the `HouseList` component into `App.jsx`.
-	- Render the `HouseList` component in `App.jsx` with the following 2 props: the full list of houses from the `firehouses.json` file and the `selectHouse` function as props.
+	- Render the `HouseList` component in `App.jsx` with the following 2 props: the full list of houses from the `firehouses.json` file and the `selectHouse` function.
 
-**Check**: You should see a list of houses rendered in the browser. Clicking on any house name should call the `selectHouse` function (you can confirm this with a `console.log` statement).
+**Check**: You should see a list of houses rendered in the browser. Clicking on any house name should call the `selectHouse` function. (You can confirm this by seeing what's logged from our `selectHouse` function.)
 
 ## Step 3: Create and Render the `CurrentHouse` Component
 
@@ -70,13 +71,13 @@ You may make additional components for the bonus tasks if you wish.
    - Create a new file named `CurrentHouse.jsx`.
    - This component should receive the currently selected `house` as a prop.
    - If no house is selected (`props.house` is `null`), render a message prompting the user to select a house.
-   - If a house is selected, render the details of the selected house, with not only the name but also the address and borough.
+   - If a house is selected, render the full details of that house--name, address, and borough. Check the `firehouses.json` file for the structure of the house object.
 
 2. **Render the `CurrentHouse` Component in `App.jsx`**:
    - Import the `CurrentHouse` component into `App.jsx`.
    - Render the `CurrentHouse` component in `App.jsx` at the top with a single house from anywhere in the array.
 
-**Check**: You should see the details of the selected house rendered in the browser. If you change the prop you pass to `CurrentHouse` in `App.jsx` to `null`, you should see the message prompting the user to select a house.
+**Check**: You should see either a prompt to select a house or the details of the selected house rendered in the browser.
 
 ## Step 4: Manage State in `App.jsx`
 
@@ -96,7 +97,7 @@ You may make additional components for the bonus tasks if you wish.
    - Pass the `house` state to the `CurrentHouse` component as a prop.
    - Pass the `houses` state and `selectHouse` function to the `HouseList` component as props.
 
-**Check**: You should still see the list of houses rendered in the browser. Clicking on any house name should update the selected house, and the details of the selected house should be displayed.
+**Check**: You should see the list of houses rendered in the browser. Clicking on any house name should update the selected house, and the details of the selected house should be displayed.
 
 ### Bonuses
 
