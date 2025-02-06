@@ -6,7 +6,19 @@ We've learned about `useState`, which is a hook for adding state to functional c
 
 `useEffect` is a hook that lets you perform side effects in function components. "Side effects" are things that affect the outside world or come from the outside world, like changing the DOM or fetching data from an API or setting timers.
 
-### Setup
+### Set Up And Run A New React App
+
+1. Open the terminal to the `lesson` directory--the simplest way to do so is to right-click on the `lesson` folder in VS Code and select "Open in Integrated Terminal". If you have only the folder open in VS Code, you can also use the keyboard shortcut Ctrl+` (backtick) to open the terminal.
+
+2. In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
+
+3. It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+4. Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
+
+5. Install dependencies by entering `npm install` in the terminal.
+
+6. Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 Let's set up our app with `npx create-react-app use-effect-lesson`. Navigate into the directory with `cd use-effect-lesson` and run `npm start` to start running it in your browser.
 
@@ -32,7 +44,7 @@ function Timer() {
 export default Timer;
 ```
 
-Import this component into your `App.js` file and render it. You should see a timer that increments every second.
+Import this component into your `App.jsx` file and render it. You should see a timer that increments every second.
 
 `useEffect` takes two arguments: a callback function, and, optionally but usually used, an array of dependencies. The callback function (in this case a function that begins a timer to go off every second) is the function that `useEffect` calls, and the dependencies array tells React how often to call our callback function. With an empty array, our callback is called when the function first runs, but _not_ on re-render. This is truly necessary in this case-- since our call to `setNumSeconds` changes state, and our component relies on that state, we re-render every second. If we didn't include the empty dependencies array, then React would call our callback function again,creating _another_ timer. And we'd get a new timer every single second!
 
@@ -90,11 +102,11 @@ function Counter() {
 export default Counter;
 ```
 
-Import this component into your `App.js` file and render it in place of the Timer component. You should see a counter that doubles the count every time you click the button.
+Import this component into your `App.jsx` file and render it in place of the Timer component. You should see a counter that doubles the count every time you click the button.
 
 Looking back at our Timer example, we could expand it, giving the user the ability to start and stop the timer. To do this, we will use the fact that when an effect is called, React runs the returned cleanup function from the previous callback.
 
-Switch `App.js` back to the Timer component and add a button to start and stop the timer:
+Switch `App.jsx` back to the Timer component and add a button to start and stop the timer:
 
 ```jsx
 import { useState, useEffect } from "react";
@@ -132,7 +144,7 @@ Let's look at a more complex example. We'll use `useEffect` to fetch data from a
 
 ##### Create Posts
 
-Create a new component in a file called `Posts.js` in the `src` folder.
+Create a new component in a file called `Posts.jsx` in the `src` folder.
 
 ```jsx
 function Posts() {
@@ -146,13 +158,13 @@ function Posts() {
 export default Posts;
 ```
 
-Don't forget to export the function, and then import this component into `App.js` and render it in place of the Timer component.
+Don't forget to export the function, and then import this component into `App.jsx` and render it in place of the Timer component.
 
 **You should at this point have the word "Posts" rendered in your browser.**
 
 ##### Create Post
 
-- In the **/src/** folder, create a new file named `Post.js`.
+- In the **/src/** folder, create a new file named `Post.jsx`.
 - Create a function called `Post` that returns a `<div>` inside of parentheses. Don’t forget to export the function at the bottom of the file.
 
 ```jsx
