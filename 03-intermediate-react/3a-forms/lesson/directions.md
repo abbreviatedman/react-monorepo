@@ -16,14 +16,19 @@ In summary, mastering form state management in React is a crucial skill for buil
 
 1. **Set Up Your Project:**
 
-- Ensure you have a React project set up. If not, create one using `create-react-app`.
+- Open the terminal to the `lesson` directory--the simplest way to do so is to right-click on the `lesson` folder in VS Code and select "Open in Integrated Terminal".
 
-```bash
-npx create-react-app my-app
-cd my-app
-```
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-- Open `/src/App.js`: This file is an example component that `create-react-app` starts with. You can delete everything in this file. Then at the top of the file, create a functional component named `App`. Don't forget to export it.
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
+
+- Install dependencies by entering `npm install` in the terminal.
+
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
+
+- Open `/src/App.jsx`: This file is an example component that React starts with. You can delete everything in this file. Then at the top of the file, create a functional component named `App`. Don't forget to export it.
 
 ```jsx
 function App() {
@@ -41,7 +46,7 @@ export default App;
 npm install bootstrap
 ```
 
-- Import Bootstrap into your project. In **/src/index.js** or **/src/App.js**, add the following line:
+- Import Bootstrap into your project. In **/src/main.jsx** or **/src/App.jsx**, add the following line:
 
 ```javascript
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -49,7 +54,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 3. **Create the Form Component:**
 
-- In the **/src/** folder, create a new file named `Form.js`.
+- In the **/src/** folder, create a new file named `Form.jsx`.
 - Inside this file, define a functional component named `Form`.
 - Add a form structure with fields for:
     - Recipient's Name
@@ -206,7 +211,7 @@ export default Form;
 
 6. **Create the Greeting Card Component:**
 
-- In the **/src/** folder, create a new file named `GreetingCard.js`.
+- In the **/src/** folder, create a new file named `GreetingCard.jsx`.
 - Inside this file, define a functional component named `GreetingCard`.
 - This component will receive the form data as props and display it in a styled greeting card format using Bootstrap.
 
