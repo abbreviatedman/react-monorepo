@@ -6,7 +6,7 @@ Certain functions that React gives us out of the box allow us to schedule and up
 
 ## What is the difference between state and props?
 
-Props (short for “properties”) and state are both plain JavaScript objects. While both hold information that influences the output of rendering the component, they are different in one important way: props get passed to the component (similar to function parameters) whereas state is managed within the component. You can think of props as "where am I sending my data?" and you can think of state as "where is my data being saved?". If props are passed from a parent into a children components then the children can't change the value of the props directly. Where as components have full control to change the state.
+Props (short for “properties”) and state are both plain JavaScript objects. While both hold information that influences the output of rendering the component, they are different in one important way: props get passed to the component (similar to function parameters) whereas state is managed within the component. You can think of props as "where am I sending my data?" and you can think of state as "where is my data being saved?". If props are passed from a parent into a children components then the children can't change the value of the props directly, while components have full control to change the state.
 
 ## Using state in components
 
