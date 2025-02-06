@@ -4,7 +4,7 @@ In this assignment, you will build a simple React application that displays a li
 
 ## Set Up And Run A New React App
 
-1. Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
+1. Open the terminal to the `2e-state-and-props-assignment` directory--the simplest way to do so is to right-click on the `2e-state-and-props-assignment` folder in VS Code and select "Open in Integrated Terminal".
 
 2. In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
@@ -41,7 +41,7 @@ You may make additional components for the bonus tasks if you wish.
 
 2. **Render a `House` Component in `App.jsx`**:
    - Import the `House` component into `App.jsx`.
-   - Import the `firehouse.json` data. If you have `firehouse.json` in the `src` folder, you can use the following line to do so: `import firehouses from "./firehouse.json";`
+   - Import the `firehouses.json` data. If you have `firehouses.json` in the `src` folder, you can use the following line to do so: `import firehouses from "./firehouses.json";`
    - Create a `selectHouse` function in `App.jsx` that, for now, just logs its argument to the console.
    - Render a single `House` component in `App.jsx`, passing it a sample house object (maybe the first house in the array) and the `selectHouse` function as props.
 
@@ -59,7 +59,7 @@ You may make additional components for the bonus tasks if you wish.
 2. **Render the `HouseList` Component in `App.jsx`**:
 	- Remove the rendering of the single sample house from the previous step.
 	- Import the `HouseList` component into `App.jsx`.
-	- Render the `HouseList` component in `App.jsx` with the following 2 props: the full list of houses from the `firehouse.json` file and the `selectHouse` function as props.
+	- Render the `HouseList` component in `App.jsx` with the following 2 props: the full list of houses from the `firehouses.json` file and the `selectHouse` function as props.
 
 **Check**: You should see a list of houses rendered in the browser. Clicking on any house name should call the `selectHouse` function (you can confirm this with a `console.log` statement).
 
@@ -82,7 +82,7 @@ You may make additional components for the bonus tasks if you wish.
 1. **State Management**:
    - Create two pieces of state using `useState`:
      - `house`: This will store the currently selected house.
-     - `houses`: This will store the list of houses from the `firehouse.json` file--this will be useful if you want to add a filter or sort feature later, and it's also the model we'd want to use if we were getting the data from an API.
+     - `houses`: This will store the list of houses from the `firehouses.json` file--this will be useful if you want to add a filter or sort feature later, and it's also the model we'd want to use if we were getting the data from an API.
 
 2. **State Initialization**:
    - Initialize the `house` state to `null`.
