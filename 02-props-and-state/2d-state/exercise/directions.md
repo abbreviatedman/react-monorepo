@@ -212,7 +212,7 @@ import React, { useState } from "react";
 
 function App() {
   const initialTasks = [
-    { id: 1, description: "Walk around the dog poop", importance: "medium" },
+    { id: 1, description: "Walk the dog", importance: "medium" },
     { id: 2, description: "Assemble the new dresser", importance: "low" },
     { id: 3, description: "Eat ice cream", importance: "high" },
   ];
