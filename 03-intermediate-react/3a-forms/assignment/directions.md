@@ -114,6 +114,7 @@ Here’s the HTML structure for the form:
 
 - Either define a separate function for each field where you handle a change in that field and update the state for that field only, or define a single dynamic handler function to update the state based on whatever form field it's working with, based on its `name` attribute.
 - Add your state-updating change handlers to each form field in the JSX.
+- Log the current state to the console, and, back in the browser, input something for each form field manually to confirm that the state updating works. It's possible that the state will be one step behind the form fields, but that's okay--remember that `useState` is asynchronous.
 
 6. **Handle Form Submission:**
 
