@@ -1,4 +1,4 @@
-# State Forms - Lab
+# State Forms - Assignment
 
 **Objective:**
 
@@ -46,6 +46,8 @@ npm install bootstrap
 ```javascript
 import "bootstrap/dist/css/bootstrap.min.css";
 ```
+
+- Remove the import of `index.css` in `main.jsx` and _all_ imports in `App.jsx`.
 
 3. **Create the Form Component:**
 
@@ -107,22 +109,34 @@ Here’s the HTML structure for the form:
   - `age`
   - `gender`
   - `isSubscribed`
-- Either define a separate function to handle a change in each one, updating the state for that field, or define a single dynamic handler function to update the state based on the form field name and value.
+  
+5. **Handle Changes in Form Fields**
 
-5. **Handle Form Submission:**
+- Either define a separate function for each field where you handle a change in that field and update the state for that field only, or define a single dynamic handler function to update the state based on whatever form field it's working with, based on its `name` attribute.
+- Add your state-updating change handlers to each form field in the JSX.
+
+6. **Handle Form Submission:**
 
 In the App component:
 
-- Define a function to handle form submission. For now, this function should _just_ a) prevent the default form action and b) log the form data to the console.
+- Remove all code inside the `App` function. Remove all imports if you didn't do so earlier.
+- Define a function to handle form submission. For now, this function should just log its argument (which will be the form data) to the console.
 - Render the `Form` component and pass down the above function as a prop.
 
-6. **Create the Contact Card Component:**
+7. **Add the Form Submission Handler:**
+
+In the Form component:
+
+- Add a form submission handler that prevents the default form submission behavior by calling the `event.preventDefault` method and then passes the form state to the function it receives as a prop from App.
+- Confirm that your app is logging the submitted form data.
+
+8. **Create the Contact Card Component:**
 
 - In the **/src/** folder, create a new file named `ContactCard.jsx`.
 - Inside this file, define a functional component named `ContactCard`.
-- This component will receive the form data as props and display it in a styled contact card format using Bootstrap.
+- This component will receive the form data as props and display it in a styled contact card format.
 
-7. **Define the Contact Card Structure:**
+9. **Define the Contact Card Structure:**
 
 In the Contact Card component, take the data in as props and display it in interface elements for the following fields:
 
@@ -132,18 +146,12 @@ In the Contact Card component, take the data in as props and display it in inter
 - Gender
 - Subscribe to newsletter status
 
-8. **Update the Form Submission Handler:**
-
-In the Form component:
-
-- Set the form submission handler function to call App's function, which should be on the props object.
-- In the `App` component, change the form submission function so that instead of logging the data, it passes it down as props to the `ContactCard` component.
-
-9. **Render the Contact Card:**
+10. **Render the Contact Card:**
 
 - In the `App` component, render the `ContactCard` component. Don't render it if there is no submitted form data (i.e., conditionally render it)
-- Use Bootstrap classes to style the card, making it visually appealing.
+- Change the form submission function so that instead of logging the data, it passes it down as props to the `ContactCard` component.
+- Style the card, making it visually appealing. One way you could go is the [Bootstrap's Card component](https://getbootstrap.com/docs/5.3/components/card/), but feel free to use your own styles or another set of Bootstrap components.
 
-10. **Check Your Browser:**
+11. **Check Your Browser:**
 
 - Save all your files and check your browser. You should be able to enter data into the form, submit it, and see it displayed in a styled contact card format.
