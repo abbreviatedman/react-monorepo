@@ -35,9 +35,10 @@ You may make additional components for the bonus tasks if you wish.
 
 1. **Create the `House` Component**:
    - Create a new file named `House.jsx`.
-   - This component should receive a `house` object and a `selectHouse` function as props. Remember that they'll be on `props.house` and `props.selectHouse` respectively.
-   - Render the house name inside a list item (`<li>`).
-   - Add an `onClick` event to the house name that calls the `selectHouse` function with the `house` object as an argument. You'll need to use an anonymous function in order to pass the `house` to `selectHouse`. Remember that those values are on `props.house` and `props.selectHouse`.
+   - Create a functional component in it. Don't forget to export!
+   - We'll be using `props.house` and `props.selectHouse` in this component. Keep in mind that `house` will be an object and `selectHouse` a function, but you don't have to make those values--they'll be passed in as props when this component is rendered. Just treat them as if they _will_ have those values, and, soon, sure enough, they will.
+   - Render the house name (`props.house`) inside a list item (`<li>`). For where the name is on the `house` object, see `firehouses.json`
+   - Add an `onClick` event to the house name that calls the `selectHouse` function (`props.selectHouse`) with the `house` object as an argument. You'll need to use an anonymous function in order to pass the `house` to `selectHouse`.
 
 2. **Render a `House` Component in `App.jsx`**:
    - Import the `House` component into `App.jsx`.
