@@ -1,0 +1,12 @@
+function CurrentHouse(props) {
+  return (
+    <div>
+      <h3>Current House</h3>
+      <p>Name: {props.house.FacilityName}</p>
+      <p>Address: {props.house.FacilityAddress}</p>
+      <p>Borough: {props.house.Borough}</p>
+    </div>
+  );
+}
+
+export default CurrentHouse;
