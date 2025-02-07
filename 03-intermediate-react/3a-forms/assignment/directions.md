@@ -100,7 +100,7 @@ You can **either** do the above with an object, or with 1 state variable for eac
 - In the change handler (or handlers), update state to match the form field's value. If you're using one state object, remember to use the spread operator, not mutate state. Log the current form state to the console. We'll use this later to confirm that our state updating is working.
 - Add your state-updating change handlers to each form field in the JSX as an `onChange` attribute. Remember that when we use a function as an event handler, we do _not_ call the function ourselves--the browser calls it when the event happens--so do not add parentheses after your function name when setting the `onChange` attributes.
 
-5. **Add Questions**
+6. **Add Questions**
 
 - Create a `questions-dev-mode.json` file in `src`. It should have the following contents:
 
@@ -149,7 +149,7 @@ In the browser:
   - Confirm that the question is being displayed in the form.
   - Input something for each form field manually and check the browser console to confirm that the state updating works. It's possible that the state will be one step behind the form fields, but that's okay--that's just `useState` being asynchronous. **Remove all log statements once you've confirmed this works.**
 
-6. **Handle `TriviaForm` Submission:**
+8. **Handle `TriviaForm` Submission:**
 
 In `App.jsx`:
 
@@ -166,7 +166,7 @@ In the `TriviaForm` component:
 In the browser:
 - Submit the form, and confirm that your app is logging that submitted data.
 
-8. **Create the `ResultsCard` Component:**
+9. **Create the `ResultsCard` Component:**
 
 - In the **/src/** folder, create a new file named `ResultsCard.jsx`.
 - Inside this file, define a functional component named `ResultsCard`. Don't forget to export it!
