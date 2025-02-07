@@ -1,20 +1,27 @@
 import { useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
 
-import Form from './Form';
-import ContactCard from './ContactCard';
+import questions from './questions-dev-mode.json';
+import TriviaForm from './TriviaForm';
+import ResultsCard from './ResultsCard';
 
 function App() {
-  const [person, setPerson] = useState(null);
+  const [question, setQuestion] = useState(getRandomQuestion(questions));
+  const [results, setResults] = useState(null);
 
-  function handleFormSubmit(formData) {
-    setPerson(formData);
+  function handleSubmit(formData) {
+    setResults(formData);
   }
+
+  function getRandomQuestion(questions) {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+
+    return questions[randomIndex];
+  };
 
   return (
     <div>
-      <Form handleSubmit={handleFormSubmit} />
-      {person && <ContactCard person={person} />}
+      <TriviaForm question={question} submitForm={handleSubmit} />
+      {results && <ResultsCard name={results.name} playerAnswer={results.answer} question={question} />}
     </div>
   )
 }
