@@ -4,18 +4,28 @@
 
 Learn how to use `useState` to manage form state in React and dynamically render the results of answering a trivia question with the results from that form data. This assignment will guide you through creating a form, managing its state, and displaying the form data in a results card.
 
-**Requirements:**
+**Overview:**
 
-1. **Application Structure:**
+There are 3 components in this project:
 
-- `App` Component: The main component where the form will be managed and the Results Card will be displayed.
-- `TriviaForm` Component: A component to handle the form inputs and submission.
-- `ResultsCard` Component: A component to display the entered form data as a results card.
+- **`App`:** The main component that renders the form and the results.
+- **`TriviaForm`:** A form component that manages the form state and handles form submission.
+- **`ResultsCard`:** A component that displays the form data for the user.
 
-2. **Form State Management:**
+Here is the overall architecture of components, state, and props:
 
-- Use state to manage form fields.
-- Optional but recommended: Manage all form fields in a single state object.
+- The `App` component renders both other components and receives the form data from the `TriviaForm` component.
+  - It receives the form data by passing a function as a prop to the `TriviaForm` component.
+  - The `TriviaForm` component calls this function with the form data when the form is submitted.
+  - `App` then passes the form data to the `ResultsCard` component, rendering `ResultsCard` conditionally when there _is_ form data to display.
+- The `TriviaForm` component manages the form state and handles form submission.
+  - It uses `useState` to manage the form state.
+  - It has a form submission handler that prevents the default form submission behavior and calls the function it receives as a prop from `App` with the form data.
+  - It renders the form fields and handles changes in the form fields.
+  - It passes the form data to the function it receives as a prop from `App` when the form is submitted.
+- The `ResultsCard` component handles displaying the results of submitting the form.
+  - It receives the form data as props from `App`.
+  - It then renders that data as results for the user.
 
 ### Steps
 
