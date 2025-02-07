@@ -107,15 +107,15 @@ You can **either** do the above with an object, or with 1 state variable for eac
 ``` json
 [
   {
-    "question": "What is the capital of France?",
+    "text": "What is the capital of France?",
     "answer": "Paris"
   },
   {
-    "question": "What is 2 + 2?",
+    "text": "What is 2 + 2?",
     "answer": "4"
   },
   {
-    "question": "What color is the sky on a clear day?",
+    "text": "What color is the sky on a clear day?",
     "answer": "Blue"
   }
 ]
