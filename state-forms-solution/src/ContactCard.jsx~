@@ -1,8 +1,0 @@
-function ContactCard() {
-  return (
-    <div className="contact-card">
-    </div>
-  );
-}
-
-export default ContactCard;
