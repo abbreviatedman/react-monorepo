@@ -188,7 +188,7 @@ In the `ResultsCard` component:
 
 11. **Check Your Browser:**
 
-- Save all your files and check your browser. You should be able to enter data into the form, submit it, and see it displayed in a styled results card format.
+- Save all your files and check your browser. You should be able to enter data into the form, submit it, and see it displayed.
 
 **Bonus Tasks**:
 
