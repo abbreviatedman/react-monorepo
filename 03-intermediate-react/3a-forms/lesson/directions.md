@@ -216,16 +216,17 @@ export default Form;
 - This component will receive the form data as props and display it in a styled greeting card format using Bootstrap.
 
 ```jsx
-function GreetingCard({ recipientName, senderName, message, occasion, includesPersonalNote }) {
+function GreetingCard(props) {
     return (
         <div className="card">
             <div className="card-body">
                 <h5 className="card-title">Greeting Card</h5>
-                <h6 className="card-subtitle mb-2 text-muted">{occasion}</h6>
-                <p className="card-text">{message}</p>
+                <h6 className="card-subtitle mb-2 text-muted">{props.occasion}</h6>
+                <p className="card-text">{props.message}</p>
                 <footer className="blockquote-footer">
-                    From: {senderName}
-                    {includesPersonalNote && <small className="d-block mt-2">Personal Note: Have a wonderful day!</small>}
+                    <p>From: {props.senderName}</p>
+                    <p>To: {props.recipientName}</p>
+                    {includesPersonalNote && <p><small className="d-block mt-2">Personal Note: Have a wonderful day!</small><p>}
                 </footer>
             </div>
         </div>
