@@ -300,34 +300,6 @@ function App() {
 export default App;
 ```
 
-9. **Render the Greeting Card:**
-
-- In the `App` component, conditionally render the `GreetingCard` component only if there is submitted form data.
-- Use Bootstrap classes to style the card, making it visually appealing.
-
-```jsx
-import { useState } from 'react';
-import Form from './Form';
-import GreetingCard from './GreetingCard';
-
-function App() {
-    const [submittedData, setSubmittedData] = useState(null);
-
-    const handleFormSubmit = (formData) => {
-        setSubmittedData(formData);
-    };
-
-    return (
-        <div className="App container">
-            <Form onSubmit={handleFormSubmit} />
-            {submittedData && <GreetingCard {...submittedData} />}
-        </div>
-    );
-}
-
-export default App;
-```
-
 10. **Check Your Browser:**
 
 - Save all your files and check your browser. You should be able to enter data into the form, submit it, and see it displayed in a styled greeting card format.
