@@ -121,7 +121,7 @@ You can **either** do the above with an object, or with 1 state variable for eac
 ]
 ```
 
-- You can create a more full and real `questions-dev-mode.json` file later, when you're done with the assignment. For now, the simplicity of these questions and being able to know the answer will really help with testing, which is why it's our Dev Mode file.
+- You can create a more full and real `questions.json` file later, when you're done with the assignment. For now, the simplicity of these questions and answers will really help with testing, which is why it's our Dev Mode file.
 
 7. **Render `TriviaForm`**
 
