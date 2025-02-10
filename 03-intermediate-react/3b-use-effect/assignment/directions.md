@@ -214,6 +214,5 @@ return (
 
 ### Bonus Challenges
 
-- Allow users to search for Pokémon by their ID as well as by their name.
 - Add additional details about the Pokémon, such as its type, abilities, and stats.
 - Style the app to make it visually appealing.
