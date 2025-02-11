@@ -6,35 +6,38 @@
 
 We are going to make a goldfish forum website page by combining different components each making up a different part of the page content.
 
-## Set Up a new Create-React-App project
+## Set Up a New React Project
+1. **Set Up Your Project:**
 
-1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
+- Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
-2. In Terminal type `npx create-react-app goldfish-site`. Here we are naming our project goldfish-site. Wait while a new project is setup... It will display "Happy hacking!" when it's done.
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-3. Then in Terminal type `cd goldfish-site` to enter the project folder.
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
+
+- Install dependencies by entering `npm install` in the terminal.
+
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ## Install Bootstrap
 
 4. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In terminal type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
-## Start Node Test Server
-
-5. In terminal type `npm start` to start a node test server this should open a new tab in your browser to **localhost:3000**.
-
 ## Import Bootstrap
 
-6. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
+6. Then in VS Code, open the **/src/main.jsx** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
 
 ## Exercise Assets
 
-7. Move the image files from the `assets` folder outside the `create-react-app` project folder into the `create-react-app` folder `public/`--this way the images will be accessible to your application.
+7. Move the image files from the `assets` folder outside the project folder into the folder `public/`--this way the images will be accessible to your application.
 
 **Each image should be in the `public` folder _directly_**, not in any other intermediate folder (not even in the `assets` folder)
 
 ## Creating the App Component
 
-10. Open **/src/App.js**. This file is an example component that `create-react-app` starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called App. Finally, export it at the bottom. This will create the following code:
+10. Open **/src/App.jsx**. This file is an example component that React starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called App. Finally, export it at the bottom. This will create the following code:
 
 ```jsx
 import React from 'react';
@@ -48,7 +51,7 @@ export default App;
 
 11. Write `<div>Hello World</div>` inside the `return` that is inside the App component.
 
-12. Let's visit the **/src/index.js** file and look at how we are passing our component to ReactDOM to be rendered.
+12. Let's visit the **/src/main.jsx** file and look at how we are passing our component to ReactDOM to be rendered.
 
 ```jsx
 import App from "./App";
@@ -69,7 +72,7 @@ The render method of ReactDOM is being passed our `<App />` component. The `<Rea
 
 13. Save your files and visit the browser. You should see "Hello World" displayed.
 
-14. In VS Code, go back to the file **/src/App.js**.
+14. In VS Code, go back to the file **/src/App.jsx**.
 
 ## Applying CSS Classes
 
@@ -105,15 +108,15 @@ function App() {
 
 Let's create components for the Header, Sidebar, and Main content areas.
 
-17. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your create-react-app-project. Select **New File** and name the file `Header.js`.
+17. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your project. Select **New File** and name the file `Header.jsx`.
 
-18. Create another file in the same location and name it `Sidebar.js`.
+18. Create another file in the same location and name it `Sidebar.jsx`.
 
-19. Create another file in the same location and name it `Main.js`.
+19. Create another file in the same location and name it `Main.jsx`.
 
 ## Working on the Header
 
-20. Inside the **/src/Header.js** file, start by importing React and creating a functional component.
+20. Inside the **/src/Header.jsx** file, start by importing React and creating a functional component.
 
 21. Name the component `Header`.
 
@@ -158,7 +161,7 @@ export default Header;
 
 ## Working on the Sidebar
 
-25. Inside the **/src/Sidebar.js** file, start by importing React and creating a functional component.
+25. Inside the **/src/Sidebar.jsx** file, start by importing React and creating a functional component.
 
 26. Name the component Sidebar.
 
@@ -214,7 +217,7 @@ export default Sidebar;
 
 ## Working on the Main Content
 
-29. Inside the **/src/Main.js** file, start by importing React and creating a functional component.
+29. Inside the **/src/Main.jsx** file, start by importing React and creating a functional component.
 
 30. Name the component Main.
 
@@ -311,7 +314,7 @@ _Note: This CSS background gradient code was created using the free online tool 
 
 We are ready to compose of all children components into out main parent component.
 
-38. Open the file **/src/App.js** and at the top of the file after the React import, add the following import code for our component files:
+38. Open the file **/src/App.jsx** and at the top of the file after the React import, add the following import code for our component files:
 
 ```javascript
 import Header from "./Header";
@@ -327,7 +330,7 @@ import Main from "./Main";
 
 ## CSS To Make It Pretty
 
-42. Inside **/src/App.js** at the top of the file below the other imports add the following line to import your `App.css` file
+42. Inside **/src/App.jsx** at the top of the file below the other imports add the following line to import your `App.css` file
 
 ```javascript
 import "./App.css";

@@ -6,43 +6,45 @@ We are going to make a Space Adventure Blog website page by combining different 
 
 ### Setup
 
-#### Set Up a new Create-React-App Project
+1. **Set Up Your Project:**
 
-1. Open VS Code and then open your terminal from the menus at the top of the screen under `View > Terminal`, or use the shortcut key **Ctrl+`**.
+- Open the terminal to the directory with this readme in it--the simplest way to do so is to right-click on the folder in VS Code and select "Open in Integrated Terminal".
 
-2. In Terminal, type `npx create-react-app space-adventure-blog`. Here we are naming our project `space-adventure-blog`. Wait while a new project is set up... It will display "Happy hacking!" when it's done.
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-3. Then in Terminal, type `cd space-adventure-blog` to enter the project folder.
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
+
+- Install dependencies by entering `npm install` in the terminal.
+
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 #### Install Bootstrap
 
 4. Next, let's import Bootstrap, a front-end framework that provides CSS code to make our project beautiful. In Terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
-#### Start Node Test Server
-
-5. In Terminal, type `npm start` to start a node test server. This should open a new tab in your browser to **localhost:3000**.
-
 #### Lab Assets
 
-6. Download a space image of your choice from the internet and move the image file to the `public/` folder in your `create-react-app` project. This way, the image will be accessible to your application.
+6. Download a space image of your choice from the internet and move the image file to the `public/` folder in your project. This way, the image will be accessible to your application.
 
 ## Import Bootstrap
 
-7. Then in VS Code, open the **/src/index.js** file and import the Bootstrap CSS by typing the following line `import 'bootstrap/dist/css/bootstrap.css';`, placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the Bootstrap styles with our own inside **index.css** if we wish to.
+7. Then in VS Code, open the **/src/main.jsx** file and import the Bootstrap CSS by typing the following line `import 'bootstrap/dist/css/bootstrap.css';`, placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the Bootstrap styles with our own inside **index.css** if we wish to.
 
 ## Creating the App Component
 
-10. Open **/src/App.js**. This file is an example component that `create-react-app` starts with. You can delete everything in this file. Then, at the top of the file, create a functional component called `App`. Finally, export it at the bottom.
+10. Open **/src/App.jsx**. This file is an example component that React starts with. You can delete everything in this file. Then, at the top of the file, create a functional component called `App`. Finally, export it at the bottom.
 
 11. Write `<div>Hello Space Adventurers</div>` inside the `return` that is inside the `App` component.
 
-12. Let's visit the **/src/index.js** file and look at how we are passing our component to ReactDOM to be rendered. The line at the top of the file is importing the code from `App.js` so `index.js` has access to the `App` component.
+12. Let's visit the **/src/main.jsx** file and look at how we are passing our component to ReactDOM to be rendered. The line at the top of the file is importing the code from `App.jsx` so `main.jsx` has access to the `App` component.
 
 13. The render method of ReactDOM is being passed our `<App />` component. The `<React.StrictMode>` gives us better error reporting by activating additional checks and warnings.
 
 14. Save your files and visit the browser. You should see "Hello Space Adventurers" displayed.
 
-15. In VS Code, go back to the file **/src/App.js**.
+15. In VS Code, go back to the file **/src/App.jsx**.
 
 ## Applying CSS Classes
 
@@ -56,17 +58,17 @@ We are going to make a Space Adventure Blog website page by combining different 
 
 Let's create components for the Navbar, Header, Main content, and Footer areas.
 
-19. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your create-react-app project. Select **New File** and name the file `Navbar.js`.
+19. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your project. Select **New File** and name the file `Navbar.jsx`.
 
-20. Create another file in the same location and name it `Header.js`.
+20. Create another file in the same location and name it `Header.jsx`.
 
-21. Create another file in the same location and name it `Main.js`.
+21. Create another file in the same location and name it `Main.jsx`.
 
-22. Create another file in the same location and name it `Footer.js`.
+22. Create another file in the same location and name it `Footer.jsx`.
 
 ## Working on the Navbar
 
-23. Inside the **/src/Navbar.js** file, start by creating a functional component. Name the component `Navbar`.
+23. Inside the **/src/Navbar.jsx** file, start by creating a functional component. Name the component `Navbar`.
 
 24. Fill the empty return statement with `<nav>`. Then add the Bootstrap class name `col-12` to `<nav>`.
 
@@ -78,7 +80,7 @@ Let's create components for the Navbar, Header, Main content, and Footer areas.
 
 ## Working on the Header
 
-26. Inside the **/src/Header.js** file, start by creating a functional component. Name the component `Header`.
+26. Inside the **/src/Header.jsx** file, start by creating a functional component. Name the component `Header`.
 
 27. Fill the empty return statement with `<header>`. Then add the Bootstrap class name `col-12` to `<header>`.
 
@@ -88,7 +90,7 @@ Let's create components for the Navbar, Header, Main content, and Footer areas.
 
 ## Working on the Main Content
 
-30. Inside the **/src/Main.js** file, start by creating a functional component. Name the component `Main`.
+30. Inside the **/src/Main.jsx** file, start by creating a functional component. Name the component `Main`.
 
 31. Fill the empty return statement with `<main>`. Then add the Bootstrap class name `col-md-12` to `<main>`.
 
@@ -102,7 +104,7 @@ Let's create components for the Navbar, Header, Main content, and Footer areas.
 
 ## Working on the Footer
 
-36. Inside the **/src/Footer.js** file, start by creating a functional component. Name the component `Footer`.
+36. Inside the **/src/Footer.jsx** file, start by creating a functional component. Name the component `Footer`.
 
 37. Fill the empty return statement with `<footer>`. Then add the Bootstrap class name `col-12` to `<footer>`.
 
@@ -118,7 +120,7 @@ Let's create components for the Navbar, Header, Main content, and Footer areas.
 
 We are ready to compose all children components into our main parent component.
 
-41. Open the file **/src/App.js** and at the top of the file, add import statements for our component files: `Navbar`, `Header`, `Main`, and `Footer`.
+41. Open the file **/src/App.jsx** and at the top of the file, add import statements for our component files: `Navbar`, `Header`, `Main`, and `Footer`.
 
 42. Replace the comments with references to our components: `<Navbar />`, `<Header />`, `<Main />`, and `<Footer />`.
 

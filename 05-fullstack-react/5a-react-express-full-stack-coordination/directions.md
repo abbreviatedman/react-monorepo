@@ -90,11 +90,11 @@ app.get("/api", getMovieData);
 
 15. Use command `cd ..` to navigate out of the server folder of the second terminal.
 
-16. Use command `npx create-react-app client` to create the front-end of our full stack app.
+16. Use command `npm create vite client` to create the front-end of our full stack app.
 
 17. Use command `cd client`
 
-18. Inside the `src` folder, in `App.js`, delete all of the original code.
+18. Inside the `src` folder, in `App.jsx`, delete all of the original code.
 
 19. Import `useState` and `useEffect`:
 
@@ -106,7 +106,7 @@ import React, { useState, useEffect } from "react";
 
 21. Place `<><div>This is the front-end</div></>` inside the empty return statement.
 
-22. Use command `npm start` to test that the front-end is working. If you see the text "This is the front-end" that means it is!
+22. Use command `npm run dev` to test that the front-end is working. If you see the text "This is the front-end" that means it is!
 
 23. Inside the `App` function, above the `return()` statement, we will define a state variable to hold the data that will get retrieved from our server. This is what that looks like:
 
@@ -184,7 +184,7 @@ Now you should at least see the data in the console of your browser
 }
 ```
 
-This is what the final `App.js` should look like:
+This is what the final `App.jsx` should look like:
 
 ```jsx
 import React, { useState, useEffect } from "react";
@@ -280,7 +280,7 @@ REACT_APP_API_URL="http://localhost:3001/api"
 export const API_URL = process.env.REACT_APP_API_URL;
 ```
 
-37. In `App.js`, import the URL at the top:
+37. In `App.jsx`, import the URL at the top:
 
 ```js
 import { API_URL } from "./constants";

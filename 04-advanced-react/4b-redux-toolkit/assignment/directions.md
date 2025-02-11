@@ -24,31 +24,19 @@ Now, let's get started with setting up your project and building the book collec
 
 ### Step 1: Set Up the Project
 
-1. Create a new React project using Create React App. Run the following command in your terminal:
+- Open the terminal to the directory with this readme in it--the simplest way to do so is to right-click on the folder in VS Code and select "Open in Integrated Terminal".
 
-```bash
-npx create-react-app book-collection-manager
-```
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-2. Navigate into your project directory. Run the following command in your terminal:
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
 
-```bash
-cd book-collection-manager
-```
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
-3. Install the necessary dependencies. Run the following command in your terminal:
+- Install dependencies by entering `npm install` in the terminal.
 
-```bash
-npm install @reduxjs/toolkit react-redux react-router-dom
-```
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
-4. Start the development server. Run the following command in your terminal:
-
-```bash
-npm start
-```
-
-**Check**: Ensure that your React app is running at `http://localhost:3000`.
+**Check**: Ensure that your React app is running at `http://localhost:5173`.
 
 Once you've set up the project and confirmed it's running, you’re ready to move on to the next step.
 
@@ -56,9 +44,9 @@ Once you've set up the project and confirmed it's running, you’re ready to mov
 
 1. In your `src` directory, create a folder named `components`.
 
-2. Inside the `components` folder, create a file named `Header.js`.
+2. Inside the `components` folder, create a file named `Header.jsx`.
 
-3. In `Header.js`, create a function named `Header`.
+3. In `Header.jsx`, create a function named `Header`.
 
 4. Inside the `Header` function, return a `header` element with a heading (h1) that says "Book Collection Manager".
 
@@ -70,9 +58,9 @@ Once you've created the `Header` component and confirmed it renders correctly, y
 
 ### Step 3: Create the BookList Component
 
-1. Inside the `components` folder, create a file named `BookList.js`.
+1. Inside the `components` folder, create a file named `BookList.jsx`.
 
-2. In `BookList.js`, create a function named `BookList`.
+2. In `BookList.jsx`, create a function named `BookList`.
 
 3. Inside the `BookList` function, return a `div` element with a heading (h2) that says "Book List".
 
@@ -84,9 +72,9 @@ Once you've created the `BookList` component and confirmed it renders correctly,
 
 ### Step 4: Create the BookItem Component
 
-1. Inside the `components` folder, create a file named `BookItem.js`.
+1. Inside the `components` folder, create a file named `BookItem.jsx`.
 
-2. In `BookItem.js`, create a function named `BookItem`.
+2. In `BookItem.jsx`, create a function named `BookItem`.
 
 3. The `BookItem` function should accept a `props` parameter.
 
@@ -100,9 +88,9 @@ Once you've created the `BookItem` component and confirmed it renders correctly,
 
 ### Step 5: Create the BookForm Component
 
-1. Inside the `components` folder, create a file named `BookForm.js`.
+1. Inside the `components` folder, create a file named `BookForm.jsx`.
 
-2. In `BookForm.js`, create a function named `BookForm`.
+2. In `BookForm.jsx`, create a function named `BookForm`.
 
 3. Inside the `BookForm` function, return a `form` element with inputs for the book title, author, and genre.
 
@@ -118,7 +106,7 @@ Once you've created the `BookForm` component and confirmed it renders and works 
 
 ### Step 6: Create the Header Component with Navigation
 
-1. In the `components` folder, open `Header.js`.
+1. In the `components` folder, open `Header.jsx`.
 
 2. Import `Link` from `react-router-dom`.
 
@@ -134,7 +122,7 @@ Once you've updated the `Header` component and confirmed it renders correctly, y
 
 ### Step 7: Create the Router Setup in the App Component
 
-1. In your `src` directory, open the `App.js` file.
+1. In your `src` directory, open the `App.jsx` file.
 
 2. Import `BrowserRouter`, `Routes`, and `Route` from `react-router-dom`.
 
@@ -276,7 +264,7 @@ Once you've added the styling for the components and confirmed it looks good, yo
 
 ### Step 13: Connect Redux Store to the App
 
-1. In your `src` directory, open the `App.js` file.
+1. In your `src` directory, open the `App.jsx` file.
 
 2. Import `Provider` from `react-redux`.
 
@@ -294,7 +282,7 @@ Once you've connected the Redux store to the App component and confirmed it work
 
 #### BookList Component
 
-1. In your `src/components` directory, open `BookList.js`.
+1. In your `src/components` directory, open `BookList.jsx`.
 
 2. Import `useSelector` from `react-redux`.
 
@@ -314,7 +302,7 @@ Once you've connected the `BookList` component to the Redux store and confirmed 
 
 #### BookForm Component
 
-1. In your `src/components` directory, open `BookForm.js`.
+1. In your `src/components` directory, open `BookForm.jsx`.
 
 2. Import `useDispatch` from `react-redux`.
 
@@ -334,7 +322,7 @@ Once you've connected the `BookForm` component to the Redux store and confirmed 
 
 ### Step 16: Update the Preferences Component
 
-1. In your `src/components` directory, create a file named `Preferences.js`.
+1. In your `src/components` directory, create a file named `Preferences.jsx`.
 
 2. Create a function named `Preferences`.
 
@@ -358,7 +346,7 @@ Once you've updated the `Preferences` component and confirmed it works correctly
 
 ### Step 17: Add a Book Detail View
 
-1. In your `src/components` directory, create a file named `BookDetail.js`.
+1. In your `src/components` directory, create a file named `BookDetail.jsx`.
 
 2. Create a function named `BookDetail`.
 
@@ -380,7 +368,7 @@ Once you've added the `BookDetail` component and confirmed it works correctly, y
 
 ### Step 18: Update Routing to Include BookDetail
 
-1. In your `src` directory, open the `App.js` file.
+1. In your `src` directory, open the `App.jsx` file.
 
 2. Import the `BookDetail` component.
 
@@ -392,7 +380,7 @@ Once you've updated the routing to include the `BookDetail` component and confir
 
 ### Step 19: Add Functionality to Edit Books
 
-1. In your `src/components` directory, open `BookDetail.js`.
+1. In your `src/components` directory, open `BookDetail.jsx`.
 
 2. Import `useDispatch` from `react-redux`.
 
@@ -414,7 +402,7 @@ Once you've added the functionality to edit books in the `BookDetail` component 
 
 ### Step 20: Add Sorting and Filtering Functionality
 
-1. In your `src/components` directory, create a file named `BookActions.js`.
+1. In your `src/components` directory, create a file named `BookActions.jsx`.
 
 2. Create a function named `BookActions`.
 

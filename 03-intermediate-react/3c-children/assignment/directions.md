@@ -8,33 +8,17 @@ Create a React app that fetches data from the Star Wars API (SWAPI) and displays
 
 ### Step 1: Set Up the React Project
 
-Use `Create React App` to set up the boilerplate for your application. Ensure your project is running successfully before proceeding.
+- Open the terminal to the `assignment` directory--the simplest way to do so is to right-click on the `assignment` folder in VS Code and select "Open in Integrated Terminal".
 
-1. Open your terminal.
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-2. Run the following command to create a new React application:
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
 
-```bash
-npx create-react-app star-wars-data-app
-```
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
-3. Navigate into your project directory:
+- Install dependencies by entering `npm install` in the terminal.
 
-```bash
-cd star-wars-data-app
-```
-
-4. Start the development server:
-
-```bash
-npm start
-```
-
-5. Open your browser and navigate to `http://localhost:3000` to see the default Create React App template.
-
-**Check:** Ensure the default Create React App template is displayed in your browser.
-
-Once you have verified that the basic Create React App boilerplate is up and running in your browser, you’re ready to move on to the next step.
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ### Step 2: Explore the Star Wars API (SWAPI)
 
@@ -79,8 +63,8 @@ Once you have reviewed and understood the structure of the JSON response, you ar
 
 Create a Navbar component that will serve as the top navigation bar for your app.
 
-1. Create a file named `Navbar.js` in the `src` directory.
-2. Inside `Navbar.js`, create a function that returns a `div` element with the class `navbar`.
+1. Create a file named `Navbar.jsx` in the `src` directory.
+2. Inside `Navbar.jsx`, create a function that returns a `div` element with the class `navbar`.
 3. Inside the `div` element, add an `h1` element with the title "Star Wars Data App".
 4. Below the `h1` element, create a `div` with the class name `links` to hold the navigation links.
 5. Use `props.children` inside the `links` div to render any child elements passed to the `Navbar` component.
@@ -115,9 +99,9 @@ Create a CSS file named `Navbar.css` in the `src` directory and add the followin
 
 ### Step 4: Use the Navbar Component
 
-1. Remove everything from the return statement in your `App.js` file.
+1. Remove everything from the return statement in your `App.jsx` file.
 2. Remove the imports for the logo and the `App.css` file.
-3. Add a `div` element to the return statement in your `App.js` file.
+3. Add a `div` element to the return statement in your `App.jsx` file.
 4. Import the `Navbar` component in your `App` component.
 5. Add the `Navbar` component as a child of the `div` element.
 6. **In the App component's return**, place navigation links as children to the `Navbar` component, using `a` elements with `href` attributes set to `#home`, `#about`, and `#contact`.
@@ -125,14 +109,14 @@ Create a CSS file named `Navbar.css` in the `src` directory and add the followin
 
 **Check:** Verify that the `Navbar` with links is displayed at the top of your app, and the links are styled correctly. Then remove the placeholder content.
 
-Once you've added the `Navbar` component with its links to your `App.js`, confirmed it renders correctly, and removed the placeholder content, you’re ready to move on to the next step.
+Once you've added the `Navbar` component with its links to your `App.jsx`, confirmed it renders correctly, and removed the placeholder content, you’re ready to move on to the next step.
 
 ### Step 5: Design the Sidebar Component
 
 Create a Sidebar component that will serve as the side navigation bar for your app.
 
-1. Create a file named `Sidebar.js` in the `src` directory.
-2. Inside `Sidebar.js`, create a function that returns a `div` element with the class name `sidebar`.
+1. Create a file named `Sidebar.jsx` in the `src` directory.
+2. Inside `Sidebar.jsx`, create a function that returns a `div` element with the class name `sidebar`.
 3. Inside the `div` element, add an `h2` element with the text "Sidebar".
 4. Below the `h2` element, create a `div` with the class name `links` to hold the navigation links.
 5. Use `props.children` inside the `links` div to render any child elements passed to the `Sidebar` component.
@@ -181,14 +165,14 @@ Create a CSS file named `Sidebar.css` in the `src` directory and add the followi
 
 **Check:** Verify that the `Sidebar` with links is displayed correctly alongside the `Navbar`, and the links are styled correctly.
 
-Once you've added the `Sidebar` component with its links to your `App.js` and confirmed it renders correctly, you’re ready to move on to the next step.
+Once you've added the `Sidebar` component with its links to your `App.jsx` and confirmed it renders correctly, you’re ready to move on to the next step.
 
 ### Step 7: Design the Presentational Parent Component
 
 Create a parent component that will render child components with the style and layout they need.
 
-1. Create a file named `ParentComponent.js` in the `src` directory.
-2. Inside `ParentComponent.js`, create a function and name it `ParentComponent`.
+1. Create a file named `ParentComponent.jsx` in the `src` directory.
+2. Inside `ParentComponent.jsx`, create a function and name it `ParentComponent`.
 3. Add a `return` statement for the `ParentComponent` function that returns a `div` element with the class name `parent-container`.
 4. Inside the `div` element, add an `h2` element with the text "Data from Star Wars API".
 5. Below the `h2` element, add a `div` with the class name `data-container` to hold the child component.
@@ -233,14 +217,14 @@ Create a CSS file named `ParentComponent.css` in the `src` directory and add the
 
 **Check**: Verify that the `ParentComponent` is displayed correctly below the `Sidebar` and `Navbar` components and that the title "Star Wars Characters" is displayed with the correct styling-- an easy one to check is if the background color is correct.
 
-Once you've added the `ParentComponent` with its title to your `App.js` and confirmed it renders correctly, you’re ready to move on to the next step.
+Once you've added the `ParentComponent` with its title to your `App.jsx` and confirmed it renders correctly, you’re ready to move on to the next step.
 
 ### Step 9: Create the Child Component
 
 Create a child component that will display the data fetched from the Star Wars API.
 
-1. Create a file named `ChildComponent.js` in the `src` directory.
-2. Inside `ChildComponent.js`, create a function expression and name it `ChildComponent`.
+1. Create a file named `ChildComponent.jsx` in the `src` directory.
+2. Inside `ChildComponent.jsx`, create a function expression and name it `ChildComponent`.
 3. Initialize a state variable called `data` with an empty array using the `useState` hook.
 4. Import the `useEffect` hook and create a `useEffect` call.
 5. Inside the `useEffect` call, create an `async` function named `fetchData`.
@@ -271,7 +255,7 @@ Create a CSS file named `ChildComponent.css` in the `src` directory and add the 
 
 Add the `ChildComponent` to the page.
 
-1. Import the `ChildComponent` in `App.js`.
+1. Import the `ChildComponent` in `App.jsx`.
 2. **In the `App` component's return statement**, add the `ChildComponent` as a child of the `ParentComponent`.
 
 **Check:** Ensure the `ChildComponent` renders on the page with Star Wars character data.

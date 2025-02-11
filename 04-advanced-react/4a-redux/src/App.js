@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Header from './Header';
+import TodoContainer from './TodoContainer';
+import Footer from './Footer';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -50,6 +53,9 @@ const App = () => {
 
   return (
     <div style={appStyles}>
+      <Header />
+      <TodoContainer />
+      <Footer />
     </div>
   );
 };

@@ -24,21 +24,17 @@ We are going to make an archive page for a blog site that displays a list of rec
 
 4. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In terminal type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
-## Start Node Test Server
-
-5. In terminal type `npm start` to start a node test server this should open a new tab in your browser to **localhost:3000**.
-
 ## Import Bootstrap
 
 6. Then in VS Code, open the **/src/main.jsx** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the bootstrap styles with our own inside index.css if we wish to.
 
 ## Exercise Assets
 
-7. Move the image files from the `assets` folder outside the create-react-app project folder into the create-react-app folder `public`. This way the images will be accessible to your application.
+7. Move the image files from the `assets` directory outside the React project directory into the directory `public`. This way the images will be accessible to your application.
 
 ## Creating the App Component
 
-8. Open **/src/App.jsx**. This file is an example component that create-react-app starts with. You can delete everything in this file. Then at the top of the file you can import React and create a functional component named `App`. Don't forget to export it.
+8. Open **/src/App.jsx**. This file is an example component that React starts with. You can delete everything in this file. Then at the top of the file you can import React and create a functional component named `App`. Don't forget to export it.
 
 9. Create a `<div>` inside of the `return()` statement.
 

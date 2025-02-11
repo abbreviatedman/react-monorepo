@@ -12,9 +12,21 @@ However, with great power comes a learning curve. As you dive into React Router,
 
 ---
 
-### React Router Basics
+### Set Up Our Project
 
-First, create a React project using `npx create-react-app react-router-lesson-app`
+- Open the terminal to the directory with this readme in it--the simplest way to do so is to right-click on the folder in VS Code and select "Open in Integrated Terminal".
+
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
+
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
+
+- Install dependencies by entering `npm install` in the terminal.
+
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
+
+### React Router Basics
 
 Before we start diving into the advanced features of React Router, we should first talk about the basics of React Router. In order to use React Router on the web you need to run `npm i react-router-dom` to install React Router. This library specifically installs the DOM version of React Router. If you are using React Native you will need to install react-router-native instead. Other than this one small difference the libraries work almost exactly the same.
 
@@ -28,41 +40,37 @@ Once you have this library there are three things you need to do in order to use
 
 The easiest step by far is setting up your router. All you need to do is import the specific router you need and wrap your entire application in that router.
 
-In `index.js`, import `BrowserRouter` and wrap the `App` element in `BrowserRouter` elements:
+In `main.jsx`, import `BrowserRouter` and wrap the `App` element in `BrowserRouter` elements:
 
 ```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-// Here is the import!
-import { BrowserRouter } from "react-router-dom";
-import reportWebVitals from "./reportWebVitals";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from "react-router-dom"; // our import!
+import App from './App.jsx'
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     {/* Here is the wrapper! */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
-);
+  </StrictMode>,
+)
 ```
 
-Generally you will import your router in the index.js page of your application and it will wrap your App component. The router works just like a context in React and provides all the necessary information to your application so you can do routing and use all the custom hooks from React Router.
+Generally you will import your router in the `main.jsx` page of your application and it will wrap your App component. The router provides all the necessary information to your application so you can do routing and use all the custom hooks from React Router.
 
-OPTIONAL - You might also see in other applications that use React Router, in `index.js` they are not wrapping the `App` component in the `BrowserRouter` component--instead they're importing it as `Router`:
+OPTIONAL - You might also see in other applications that use React Router, in `main.jsx` they are not wrapping the `App` component in the `BrowserRouter` component--instead they're importing it as `Router`:
 
 ```jsx
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 ```
 
-Then if you render everything in a wrapped `<Router></Router>` component, this will produce the same effect. Both methods work fine, and it is up to you how you want to apply it. For the rest of this lesson however, we would be going with the first method shown where `BrowserRouter` wraps the `App` component in `index.js`
+Then if you render everything in a wrapped `<Router></Router>` component, this will produce the same effect. Both methods work fine, and it is up to you how you want to apply it. For the rest of this lesson however, we would be going with the first method shown where `BrowserRouter` wraps the `App` component in `main.jsx`
 
 Before getting started, let's create 2 custom components within the `src` folder.
 
-- Create `Home.js`:
+- Create `Home.jsx`:
 
 ```jsx
 function Home() {
@@ -72,7 +80,7 @@ function Home() {
 export default Home;
 ```
 
-- Create `GameList.js`:
+- Create `GameList.jsx`:
 
 ```jsx
 function GameList() {
@@ -86,7 +94,7 @@ export default GameList;
 
 The next step in React Router is to define your routes. This is generally done at the top level of your application, such as in the `App` component, but can be done anywhere you want.
 
-Here is an example of how it's done in `App.js` file:
+Here is an example of how it's done in `App.jsx` file:
 
 ```jsx
 import { Route, Routes } from "react-router-dom";
@@ -107,11 +115,11 @@ export default App;
 
 Defining routes is as simple as defining a single `Route` component for each route in your application and then putting all those `Route` components in a single `Routes` component. Whenever your URL changes, React Router will look at the routes defined in your Routes component and it will render the content in the element prop of the Route that has a path that matches the URL. In the above example if our URL was `/games` then the GameList component would be rendered.
 
-The `Home.js` file is a functional component that only returns `<h1>This is the home page!</h1>`. The `GameList.js` file is a functional component that only returns `<h1>This is the GameList component</h1>`. We can expand on these components later, but the purpose is just to test the routes for now.
+The `Home.jsx` file is a functional component that only returns `<h1>This is the home page!</h1>`. The `GameList.jsx` file is a functional component that only returns `<h1>This is the GameList component</h1>`. We can expand on these components later, but the purpose is just to test the routes for now.
 
 The nice thing about React Router is that when you navigate between pages it will only refresh the content inside your Routes component. All the rest of the content on your page will stay the same which helps with performance and user experience.
 
-- Turn the server on with command `npm start`
+- Turn the server on with command `npm run dev`
 - The initial page should load, and you should see text displaying `This is the home page!`
 - In the URL bar, add `/games` to the end of the URL. You should see text displaying `This is the GameList component`
 
@@ -119,7 +127,7 @@ The nice thing about React Router is that when you navigate between pages it wil
 
 The next step to React Router is handling navigation. Normally in an application you would navigate with anchor tags, but React Router uses its own custom `Link` component to handle navigation. This `Link` component is just like an anchor tag that helps ensure all the routing and conditional re-rendering is handled properly, so you can use it just like your would a normal anchor tag.
 
-In `App.js`, make the following updates:
+In `App.jsx`, make the following updates:
 
 ```jsx
 // Include 'Link' in this import
@@ -177,7 +185,7 @@ This is where React Router really gets interesting. There is a lot of cool stuff
 
 The simplest and most common advanced feature in React Router is handling dynamic routes. In our example, let's assume that we want to render out a component for individual gamess in our application. We could hardcode each of those routes, but if we have hundreds of games (or the ability for users to create games), then it is impossible to hardcode all these routes. Instead we need a dynamic route.
 
-First, let's create a component to represet just 1 game by creating `Game.js` within the `src` folder:
+First, let's create a component to represet just 1 game by creating `Game.jsx` within the `src` folder:
 
 ```jsx
 function Game() {
@@ -187,7 +195,7 @@ function Game() {
 export default Game;
 ```
 
-- Add this route to your `App.js`
+- Add this route to your `App.jsx`
 
 ```jsx
 <Routes>
@@ -202,7 +210,7 @@ The final route in the above example is a dynamic route that has a dynamic param
 
 For the most part, when you have a dynamic route like this you want to access the dynamic value in your custom component which is where the `useParams` hook comes in.
 
-- Add the following to `./Game.js`:
+- Add the following to `./Game.jsx`:
 
 ```jsx
 import { useParams } from "react-router-dom";
@@ -222,7 +230,7 @@ The `useParams` hook takes no parameters and will return an object with keys tha
 
 When we were just dealing with hard coded routes it was pretty easy to know which route would be rendered, but when dealing with dynamic routes it can be a bit more complicated. Take these routes for example.
 
-- Create `./NewGame.js`:
+- Create `./NewGame.jsx`:
 
 ```jsx
 function NewGame() {
@@ -239,7 +247,7 @@ function NewGame() {
 export default NewGame;
 ```
 
-- Add this route to your `App.js`
+- Add this route to your `App.jsx`
 
 ```jsx
 <Routes>
@@ -255,7 +263,7 @@ In older versions of React Router, whichever route was defined first would be th
 
 While we are on the topic of routing priority, we should also talk about how to create a route that matches anything:
 
-- Create `./NotFound.js`
+- Create `./NotFound.jsx`
 
 ```jsx
 function NotFound() {
@@ -269,7 +277,7 @@ function NotFound() {
 export default NotFound;
 ```
 
-- Add this route to your `App.js`
+- Add this route to your `App.jsx`
 
 ```jsx
 <Routes>
@@ -284,7 +292,7 @@ export default NotFound;
 
 A `*` will match anything at all which makes it perfect for things like a 404 page. A route that contains a `*` will also be less specific than anything else so you will never accidentally match a `*` route when another route would have also matched.
 
-Make sure before testing, to update your imports and add the new links in your `App.js`. Here is what that file should currently look at:
+Make sure before testing, to update your imports and add the new links in your `App.jsx`. Here is what that file should currently look at:
 
 ```jsx
 import { Route, Routes, Link } from "react-router-dom";
@@ -359,7 +367,7 @@ Now if this is all you could do with nested routes it would be only marginally u
 
 Let's imagine that we want to render a nav section with links to each game as well the new game form from any of our game pages. To do this normally we would need to make a shared component to store this navigation, and then import that into every single game related component. This is a bit of a pain, though, so React Router created its own solution to solve this problem. If you pass an `element` prop to a parent route it will render that component for every single child `Route` which means you can put a shared nav or other shared components on every child page with ease.
 
-- Modify the routes in `App.js`:
+- Modify the routes in `App.jsx`:
 
 ```jsx
 <Routes>
@@ -372,7 +380,7 @@ Let's imagine that we want to render a nav section with links to each game as we
 </Routes>
 ```
 
-- Modify `./GameList.js`:
+- Modify `./GameList.jsx`:
 
 ```jsx
 import { Link, Outlet } from "react-router-dom";

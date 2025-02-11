@@ -2,31 +2,17 @@
 
 ### Step 1: Set Up the React Project
 
-Use `Create React App` to set up the boilerplate for your application. Ensure your project is running successfully before proceeding.
+- Open the terminal to the `assignment` directory--the simplest way to do so is to right-click on the `assignment` folder in VS Code and select "Open in Integrated Terminal".
 
-1. Open your terminal.
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-2. Run the following command to create a new React application:
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
 
-```bash
-npx create-react-app pokemon-toggle-app
-```
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
-3. Navigate into your project directory:
+- Install dependencies by entering `npm install` in the terminal.
 
-```bash
-cd pokemon-toggle-app
-```
-
-4. Start the development server:
-
-```bash
-npm start
-```
-
-5. Open your browser and navigate to `http://localhost:3000` to see the default Create React App template.
-
-Once you have verified that the basic Create React App boilerplate is up and running in your browser, you’re ready to move on to the next step.
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ### Step 2: Exploring the PokeAPI
 
@@ -211,4 +197,6 @@ return (
 ### Bonus Challenges
 
 - Add additional details about the Pokémon, such as its type, abilities, and stats.
+- Add a message to inform users when the Pokémon is not found.
+- Set the pokemon to always show its front when you search for it. Currently, if you flip a pokemon to its back and then search for a new pokemon, the new pokemon will show its back. **This will take some rewriting of our solution**, since you'll want to make a change to the `isFront` state _not_ make a new API call but to instead make which image to show dependent on the `isFront` state. You'll thus need to save both images in some way, or save the whole pokemon you get back from the server.
 - Style the app to make it visually appealing.

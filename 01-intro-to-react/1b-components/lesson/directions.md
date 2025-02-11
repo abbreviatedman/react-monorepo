@@ -56,7 +56,7 @@ class Wine extends Component {
 export default Wine;
 ```
 
-Since we have exported our Wine component we can now import it into another file. Let's say we saved the code above into a file called `Wine.js`. Then, in another file, we can import it. Here we are importing from `./` meaning the same folder.
+Since we have exported our Wine component we can now import it into another file. Let's say we saved the code above into a file called `Wine.jsx`. Then, in another file, we can import it. Here we are importing from `./` meaning the same folder.
 
 ```javascript
 import Wine from "./Wine";

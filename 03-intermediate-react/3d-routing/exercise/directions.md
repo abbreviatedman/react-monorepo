@@ -6,13 +6,19 @@
 
 In this exercise we will be a space mission website that will inform astronauts the details of their next mission. The site will also access NASA API to get images from the Mars rover. If you would like to learn more about the API we are using you can visit the website at: [https://api.nasa.gov/](https://api.nasa.gov/).
 
-## Set Up A New Create-React-App Project
+## Set Up A New React Project
 
-1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
+- Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
-2. In Terminal type `npx create-react-app space-mission`. Wait while a new project is setup... It will display "Happy hacking!" when it's done.
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-3. In Terminal type `cd space-mission` to enter the project folder.
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
+
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
+
+- Install dependencies by entering `npm install` in the terminal.
+
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ## Install Bootstrap
 
@@ -22,25 +28,21 @@ In this exercise we will be a space mission website that will inform astronauts 
 
 5. Import React Router DOM. In terminal type `npm i react-router-dom`. This will install the package into our project.
 
-## Start Node Test Server
-
-6. In terminal type `npm start` to start a node test server this should open a new tab in your browser to **localhost:3000**.
-
 ## Import Bootstrap
 
-7. Then in VS Code, open the **/src/index.js** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**.
+7. Then in VS Code, open the **/src/main.jsx** file and import the bootstrap css like by typing the following line `import 'bootstrap/dist/css/bootstrap.css';` placing it just after the import for ReactDOM and just before our import for **Index.css**.
 
 ## Import And Use BrowserRouter
 
-8. On **index.js** import the Browser Router by typing the following line `import { BrowserRouter } from 'react-router-dom';` placing it just after the import for **App.js**. Then, wrap the App component in `<BrowserRouter></BrowserRouter>` tags.
+8. On **main.jsx** import the Browser Router by typing the following line `import { BrowserRouter } from 'react-router-dom';` placing it just after the import for **App.jsx**. Then, wrap the App component in `<BrowserRouter></BrowserRouter>` tags.
 
 ## Exercise Assets
 
-9. Move the image files from the _/assets_ folder outside the create-react-app project folder into the create-react-app folder _/public/_ this way the images will be accessible to your application. Also move the components folder and hooks folders into the `src` folder.
+9. Move the image files from the _/assets_ folder outside the project folder into the folder _/public/_ this way the images will be accessible to your application. Also move the components folder and hooks folders into the `src` folder.
 
 ## Creating the App Component
 
-10. Open **/src/App.js**. This file is an example component that create-react-app starts with. You can delete everything in this file. Create the boiler plate code for a functional component called `App`. Don't forget to export it.
+10. Open **/src/App.jsx**. This file is an example component that React starts with. You can delete everything in this file. Create the boiler plate code for a functional component called `App`. Don't forget to export it.
 
 ## Adding Custom CSS
 
@@ -85,7 +87,7 @@ td {
 }
 ```
 
-13. Back in **/src/App.js**, at the top of the file below the React import we want to import the Router, and Route.
+13. Back in **/src/App.jsx**, at the top of the file below the React import we want to import the Router, and Route.
 
 ```javascript
 import { Routes, Route } from "react-router-dom";
@@ -116,9 +118,9 @@ We have wrapped all other elements in the `<Routes>` element and inside we added
 
 Most of these other components will display static data so we will create them as static functional components.
 
-15. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Header.js`.
+15. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Header.jsx`.
 
-16. Open the **/src/Header.js** file and create the basic functional component scaffolding. Name the function `Header`.
+16. Open the **/src/Header.jsx** file and create the basic functional component scaffolding. Name the function `Header`.
 
 17. At the top of the file import the Link component.
 
@@ -154,7 +156,7 @@ function Header() {
 export default Header;
 ```
 
-19. Save this file and head back to **/src/App.js** and after the React Router DOM import, include an import to the `Header` component.
+19. Save this file and head back to **/src/App.jsx** and after the React Router DOM import, include an import to the `Header` component.
 
 ```javascript
 import Header from "./Header";
@@ -164,9 +166,9 @@ import Header from "./Header";
 
 ## Create Navbar Component
 
-21. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Navbar.js`.
+21. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Navbar.jsx`.
 
-22. Open the **/src/Navbar.js** file and create the basic functional component scaffolding. Name the function `Navbar`.
+22. Open the **/src/Navbar.jsx** file and create the basic functional component scaffolding. Name the function `Navbar`.
 
 23. At the top of the file import the Link component.
 
@@ -202,7 +204,7 @@ function Navbar() {
 export default Navbar;
 ```
 
-25. Save this file and head back to **/src/App.js** and after the React Router DOM import, include an import to the `Navbar` component.
+25. Save this file and head back to **/src/App.jsx** and after the React Router DOM import, include an import to the `Navbar` component.
 
 ```javascript
 import Navbar from "./Navbar";
@@ -212,9 +214,9 @@ import Navbar from "./Navbar";
 
 ## Create Home Component
 
-27. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Home.js`.
+27. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Home.jsx`.
 
-28. Open the **/src/Home.js** file and create the basic functional component scaffolding. Name the function `Home`.
+28. Open the **/src/Home.jsx** file and create the basic functional component scaffolding. Name the function `Home`.
 
 29. Fill the empty `return ( )` with the following elements:
 
@@ -293,7 +295,7 @@ function Home() {
 export default Home;
 ```
 
-30. Save this file and head back to **/src/App.js** and after the React Router DOM import, include an import to the `Home` component.
+30. Save this file and head back to **/src/App.jsx** and after the React Router DOM import, include an import to the `Home` component.
 
 ```javascript
 import Home from "./Home";
@@ -303,9 +305,9 @@ import Home from "./Home";
 
 ## Create Mission Component
 
-32. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Mission.js`.
+32. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Mission.jsx`.
 
-33. Open the **/src/Mission.js** file and create the basic functional component scaffolding. Name the function `Mission`.
+33. Open the **/src/Mission.jsx** file and create the basic functional component scaffolding. Name the function `Mission`.
 
 34. Fill the empty `return ( )` with the following elements:
 
@@ -391,7 +393,7 @@ function Mission() {
 export default Mission;
 ```
 
-35. Save this file and head back to **/src/App.js** and after the React Router DOM import, include an import to the `Mission` component.
+35. Save this file and head back to **/src/App.jsx** and after the React Router DOM import, include an import to the `Mission` component.
 
 ```javascript
 import Mission from "./Mission";
@@ -401,9 +403,9 @@ import Mission from "./Mission";
 
 ## Create Contact Component
 
-37. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Contact.js`.
+37. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Contact.jsx`.
 
-38. Open the **/src/Contact.js** file and create the basic functional component scaffolding. Name the function `Contact`.
+38. Open the **/src/Contact.jsx** file and create the basic functional component scaffolding. Name the function `Contact`.
 
 39. Fill the empty `return ( )` with the following elements:
 
@@ -485,7 +487,7 @@ function Contact() {
 export default Contact;
 ```
 
-40. Save this file and head back to **/src/App.js** and after the React Router DOM import, include an import to the `Contact` component.
+40. Save this file and head back to **/src/App.jsx** and after the React Router DOM import, include an import to the `Contact` component.
 
 ```javascript
 import Contact from "./Contact";
@@ -497,9 +499,9 @@ import Contact from "./Contact";
 
 This will be a special component that will pull down images from the NASA API.
 
-42. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Gallery.js`.
+42. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Gallery.jsx`.
 
-43. Open the **/src/Gallery.js** file and create the functional component scaffolding. Name the component `Gallery`.
+43. Open the **/src/Gallery.jsx** file and create the functional component scaffolding. Name the component `Gallery`.
 
 44. Import and use `useEffect` to make an API call when the component renders and `useState` to hold the photos we get back.
 
@@ -575,7 +577,7 @@ function Gallery() {
 export default Gallery;
 ```
 
-47. Save this file and head back to **/src/App.js** and after the React Router DOM import, include an import to the `Gallery` component.
+47. Save this file and head back to **/src/App.jsx** and after the React Router DOM import, include an import to the `Gallery` component.
 
 ```javascript
 import Gallery from "./Gallery";
@@ -587,9 +589,9 @@ import Gallery from "./Gallery";
 
 This will be a simple functional component to display an image for each photo inside our photos array within Gallery component.
 
-49. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Photo.js`.
+49. From the File Explorer from the left side panel **right click** on the **/src/** folder and select **New File**. Name the file `Photo.jsx`.
 
-50. Open the **/src/Photo.js** file and create the basic functional component scaffolding. Name the function `Photo`. Don't forget to export it.
+50. Open the **/src/Photo.jsx** file and create the basic functional component scaffolding. Name the function `Photo`. Don't forget to export it.
 
 51. Pass the prop object into the function `function Photo(props) {`. This will make props accessible inside of our functional component.
 
@@ -617,7 +619,7 @@ function Photo(props) {
 export default Photo;
 ```
 
-53. Save this file and head back to **/src/Gallery.js** and after the React import, include an import to the `Photo` component.
+53. Save this file and head back to **/src/Gallery.jsx** and after the React import, include an import to the `Photo` component.
 
 ```javascript
 import Photo from "./Photo";

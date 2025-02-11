@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [pokemonName, setPokemonName] = useState('');
-  const [pokemonImage, setPokemonImage] = useState('');
   const [isFront, setIsFront] = useState(true);
+  const [pokemon, setPokemon] = useState(null);
   const [message, setMessage] = useState('');
 
   useEffect(() => {
@@ -12,24 +12,33 @@ function App() {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
       if (!response.ok) {
         setMessage('Pokemon not found');
+        setPokemon(null);
 
 	return;
       }
 
-      const pokemon = await response.json();
-      setPokemonImage(pokemon.sprites[isFront ? "front_default" : "back_default"]);
-      setMessage('');
+      const newPokemon = await response.json();
+      setPokemon(newPokemon);
       setIsFront(true);
+      setMessage('');
     };
 
     if (pokemonName) {
       fetchPokemonImage();
     }
-  }, [isFront, pokemonName]);
+  }, [pokemonName]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setPokemonName(searchQuery.toLowerCase());
+  }
+
+  const flipPokemonImage = () => {
+    setPokemonImage((previousImage) => {
+      return previousImage === pokemon.sprites["front_default"]
+        ? pokemon.sprites["back_default"]
+        : pokemon.sprites["front_default"]
+    })
   }
   
   return (
@@ -47,8 +56,13 @@ function App() {
       </form>
 
       {message && <p>{message}</p>}
-      <div onClick={() => setIsFront((prevIsFront) => !prevIsFront)}>
-	<img src={pokemonImage} alt={pokemonName} />
+      <div onClick={() => setIsFront((i) => !i)}>
+	{
+          pokemon && <img
+		       src={isFront ? pokemon.sprites["front_default"] : pokemon.sprites["back_default"]}
+		       alt={pokemonName}
+		     />
+        }
       </div>
     </>
   )

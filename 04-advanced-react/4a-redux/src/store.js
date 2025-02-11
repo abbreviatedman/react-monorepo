@@ -115,6 +115,7 @@ const todosSlice = createSlice({
 export const selectTodos = (state) => state.todos;
 
 export const { todoAdded, todoToggled, todosDeleted, todoDeleted, completedTodosDeleted, markAllTodosCompleted } = todosSlice.actions;
+
 export const store = configureStore({
   reducer: { todos: todosSlice.reducer },
   devTools: true,

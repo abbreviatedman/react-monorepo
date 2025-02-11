@@ -34,7 +34,7 @@ In this exercise we will be building a task list that will allow users to write 
 
 ## Creating the App Component
 
-10. Open **/src/App.jsx**. This file is an example component that create-react-app starts with. You can delete everything in this file.
+10. Open **/src/App.jsx**. This file is an example component that React starts with. You can delete everything in this file.
 
 11. Next, create the boiler plate code for a functional component (including importing React and exporting the function). Name the function `App`.
 

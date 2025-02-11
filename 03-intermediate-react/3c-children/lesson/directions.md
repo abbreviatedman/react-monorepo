@@ -16,37 +16,25 @@ Let's look at some use cases and how we'd implement them using `props.children` 
 
 ### Step 1: Set Up the React Project
 
-Use `Create React App` to set up the boilerplate for your application. Ensure your project is running successfully before proceeding.
+1. **Set Up Your Project:**
 
-1. Open your terminal.
+- Open the terminal to the `lesson` directory--the simplest way to do so is to right-click on the `lesson` folder in VS Code and select "Open in Integrated Terminal".
 
-2. Run the following command to create a new React application:
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-```bash
-npx create-react-app my-children-example
-```
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
 
-3. Navigate into your project directory:
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
-```bash
-cd my-children-example
-```
+- Install dependencies by entering `npm install` in the terminal.
 
-4. Start the development server:
-
-```bash
-npm start
-```
-
-5. Open your browser and navigate to `http://localhost:3000` to see the default Create React App template.
-
-Once you have verified that the basic Create React App boilerplate is up and running in your browser, you’re ready to move on to the next step.
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ### Step 2: Create a Parent Component
 
 Let's create a `ParentComponent` that will render its children using `props.children`.
 
-**File:** `src/ParentComponent.js`
+**File:** `src/ParentComponent.jsx`
 
 ```jsx
 import React from 'react';
@@ -69,7 +57,7 @@ Now, let’s create multiple child components that we will render inside the `Pa
 
 ##### Create ChildComponentA
 
-**File:** `src/ChildComponentA.js`
+**File:** `src/ChildComponentA.jsx`
 
 ```jsx
 import React from 'react';
@@ -87,7 +75,7 @@ export default ChildComponentA;
 
 ##### Create ChildComponentB
 
-**File:** `src/ChildComponentB.js`
+**File:** `src/ChildComponentB.jsx`
 
 ``` jsx
 import React from 'react';
@@ -105,7 +93,7 @@ export default ChildComponentB;
 
 ##### Create ChildComponentC
 
-**File:** `src/ChildComponentC.js`
+**File:** `src/ChildComponentC.jsx`
 
 ``` jsx
 import React from 'react';
@@ -125,7 +113,7 @@ export default ChildComponentC;
 
 Now, let’s put everything together by using the `ParentComponent` and the child components in your main `App` component.
 
-**File:** `src/App.js`
+**File:** `src/App.jsx`
 
 ```jsx
 import React from 'react';
@@ -176,7 +164,7 @@ Let’s add some basic styling to our app to make it visually appealing.
 
 2. **Import the CSS file in App.js:**
 
-**File:** `src/App.js`
+**File:** `src/App.jsx`
 
 ``` jsx
 import './App.css';
@@ -186,7 +174,7 @@ import './App.css';
 
 Add a className to each child component to apply the styles.
 
-**File:** `src/ChildComponentA.js`
+**File:** `src/ChildComponentA.jsx`
 
 ``` jsx
 import React from 'react';
@@ -202,7 +190,7 @@ function ChildComponentA () {
 export default ChildComponentA;
 ```
 
-**File:** `src/ChildComponentB.js`
+**File:** `src/ChildComponentB.jsx`
 
 ``` jsx
 import React from 'react';
@@ -218,7 +206,7 @@ function ChildComponentB () {
 export default ChildComponentB;
 ```
 
-**File:** `src/ChildComponentC.js`
+**File:** `src/ChildComponentC.jsx`
 
 ``` jsx
 import React from 'react';
@@ -240,7 +228,7 @@ Let’s implement a more real-world use case by creating a Modal component that 
 
 1. **Create a Modal Component:**
 
-**File:** `src/Modal.js`
+**File:** `src/Modal.jsx`
 
 ```jsx
 import React from 'react';
@@ -312,7 +300,7 @@ Now let’s use the `Modal` component in your main `App` component to demonstrat
 
 1. **Update App.js to include the Modal:**
 
-**File:** `src/App.js`
+**File:** `src/App.jsx`
 
 ```jsx
 import React, { useState } from 'react';
@@ -363,7 +351,7 @@ Another real-world use case for `props.children` is creating a Sidebar component
 
 1. **Create a Sidebar Component:**
 
-**File:** `src/Sidebar.js`
+**File:** `src/Sidebar.jsx`
 
 ```jsx
 import React from 'react';
@@ -412,7 +400,7 @@ Let’s use the `Sidebar` component in your main `App` component to demonstrate 
 
 1. **Update App.js to include the Sidebar:**
 
-**File:** `src/App.js`
+**File:** `src/App.jsx`
 
 ```jsx
 import React, { useState } from 'react';
@@ -486,7 +474,7 @@ Another real-world use case for `props.children` is creating a Card component th
 
 1. **Create a Card Component:**
 
-**File:** `src/Card.js`
+**File:** `src/Card.jsx`
 
 ```jsx
 import React from 'react';
@@ -523,7 +511,7 @@ Let’s use the `Card` component in your main `App` component to demonstrate how
 
 1. **Update App.js to include the Card:**
 
-**File:** `src/App.js`
+**File:** `src/App.jsx`
 
 ```jsx
 import React, { useState } from 'react';

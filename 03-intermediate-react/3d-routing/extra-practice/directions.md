@@ -6,27 +6,23 @@ Create a React application that utilizes React Router to navigate between differ
 
 ### Step 1: Set Up the React Project
 
-Use `Create React App` to set up the boilerplate for your application. Install React Router before running the development server to manage navigation in your React application.
+- Open the terminal to this directory--the simplest way to do so is to right-click on the directory in VS Code and select "Open in Integrated Terminal".
 
-1. Open your terminal.
+- In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
-2. Run the following command to create a new React application:
+- It will warn you that there are files here currently. Use the arrow keys and Enter/Return to select "Ignore files and continue". This allows us to keep our readme and any data/assets files we have in our new project folder.
 
-```bash
-npx create-react-app react-router-extra-practice-app
-```
+- Choose React and then JavaScript from the following menus, using arrow keys and Enter/Return.
 
-3. Navigate into your project directory:
+- Install dependencies by entering `npm install` in the terminal.
 
-```bash
-cd react-router-extra-practice-app
-```
-
-4. Install React Router:
+- Install React Router:
 
 ```bash
 npm install react-router-dom
 ```
+
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 **Check:** Verify that React Router is listed as a dependency in your `package.json` file.
 
@@ -34,22 +30,17 @@ Once you have installed React Router and confirmed it's in your dependencies, yo
 
 ### Step 2: Create the Home Component
 
-1. In your `src` directory, create a file named `Home.js`.
-2. Inside `Home.js`, create a function declaration and name it `Home`.
+1. In your `src` directory, create a file named `Home.jsx`.
+2. Inside `Home.jsx`, create a function declaration and name it `Home`.
 3. Add a `return` statement that returns a `div` element.
 4. Inside the `div` element, add an `h1` element with the text "Home Page".
 5. Export the `Home` function.
-6. In `index.js`, import and wrap your app in the `BrowserRouter` component from `react-router-dom`.
-7. Inside `App.js`, set up the router by importing the necessary components from `react-router-dom`.
+6. In `main.jsx`, import and wrap your app in the `BrowserRouter` component from `react-router-dom`.
+7. Inside `App.jsx`, set up the router by importing the necessary components from `react-router-dom`.
 8. In the `return` statement, create a `div` with the `className` of "App".
 9. Inside that `div`, create another `div` with a `className` of "content".
 10.  Inside the "content" `div`, set up the `Routes` and `Route` components to define your routes.
 11. For now, include only the `Home` component.
-12. Start the development server:
-
-```
-npm start
-```
 
 **Check:** Ensure that the `Home` component is displayed correctly when you navigate to the root URL (`/`).
 
@@ -57,8 +48,8 @@ Once you've created the `Home` component and confirmed it renders correctly, you
 
 ### Step 3: Create the About Component
 
-1. In your `src` directory, create a file named `About.js`.
-2. Inside `About.js`, create a function declaration and name it `About`.
+1. In your `src` directory, create a file named `About.jsx`.
+2. Inside `About.jsx`, create a function declaration and name it `About`.
 3. Add a `return` statement that returns a `div` element.
 4. Inside the `div` element, add an `h1` element with the text "About Page".
 5. Export the `About` function.
@@ -70,8 +61,8 @@ Once you've created the `About` component and confirmed it renders correctly, yo
 
 ### Step 4: Create the Users Component
 
-1. In your `src` directory, create a file named `Users.js`.
-2. Inside `Users.js`, create a function declaration and name it `Users`.
+1. In your `src` directory, create a file named `Users.jsx`.
+2. Inside `Users.jsx`, create a function declaration and name it `Users`.
 3. Initialize a state variable called `users` with an empty array using the `useState` hook.
 4. Import the `useEffect` hook and create a `useEffect` call.
 5. Inside the `useEffect` call, create an `async` function named `fetchUsers`.
@@ -93,13 +84,13 @@ Once you've created the `Users` component and confirmed it renders correctly, yo
 
 Create a navigation bar to help users navigate between the different pages.
 
-1. In your `src` directory, create a file named `Navbar.js`.
-2. Inside `Navbar.js`, create a function declaration and name it `Navbar`.
+1. In your `src` directory, create a file named `Navbar.jsx`.
+2. Inside `Navbar.jsx`, create a function declaration and name it `Navbar`.
 3. Use `Link` from `react-router-dom` to create navigation links to the Home, About, and Users pages.
 4. Add a `return` statement that returns a `nav` element.
 5. Inside the `nav` element, add `Link` components for Home, About, and Users with `to` attributes set to `/`, `/about`, and `/users` respectively.
 6. Export the `Navbar` function.
-7. In `App.js`, import the `Navbar` component and render it in the return statement, _inside_ the "App" `div` but _above_ the "content" `div`.
+7. In `App.jsx`, import the `Navbar` component and render it in the return statement, _inside_ the "App" `div` but _above_ the "content" `div`.
 
 **Check**: Ensure the `Navbar` component is displayed correctly and that the navigation links work as expected.
 
@@ -179,7 +170,7 @@ Now that you’ve built your app, it’s time to test and review everything to e
    - Make sure your development server is running:
 
 ```
-npm start
+npm run dev
 ```
 
 2. **Test Your Components:**

@@ -20,8 +20,6 @@ We've learned about `useState`, which is a hook for adding state to functional c
 
 6. Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
-Let's set up our app with `npx create-react-app use-effect-lesson`. Navigate into the directory with `cd use-effect-lesson` and run `npm start` to start running it in your browser.
-
 ### A Basic Side Effect Use Case: Timers
 
 Let's look at an example of a side effect: setting a timer, using JavaScript's built-in `setInterval` function.

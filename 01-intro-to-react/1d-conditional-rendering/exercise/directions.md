@@ -19,7 +19,7 @@ We are going to build a weather-themed React application that demonstrates condi
 
 ## Import Bootstrap
 
-5. Then in VS Code, open the **/src/index.js** file and import the Bootstrap CSS by typing the following line `import 'bootstrap/dist/css/bootstrap.css';`, placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the Bootstrap styles with our own inside **index.css** if we wish to.
+5. Then in VS Code, open the **/src/main.jsx** file and import the Bootstrap CSS by typing the following line `import 'bootstrap/dist/css/bootstrap.css';`, placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the Bootstrap styles with our own inside **index.css** if we wish to.
 
 ## Start Node Test Server
 
@@ -27,12 +27,12 @@ We are going to build a weather-themed React application that demonstrates condi
 
 ## Creating the App Component
 
-7. Open **/src/App.js**. This file is an example component that `create-react-app` starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called `App`. Finally, export it at the bottom.
+7. Open **/src/App.jsx**. This file is an example component that a React app starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called `App`. Finally, export it at the bottom.
 8. Write `<div className="App">Weather Conditions</div>` inside the `return` that is inside the `App` component.
-9. Let's visit the **/src/index.js** file and look at how we are passing our component to ReactDOM to be rendered. The line at the top of the file is importing the code from `App.js` so `index.js` has access to the `App` component.
+9. Let's visit the **/src/main.jsx** file and look at how we are passing our component to ReactDOM to be rendered. The line at the top of the file is importing the code from `App.jsx` so `main.jsx` has access to the `App` component.
 10. The render method of ReactDOM is being passed our `<App />` component. The `<React.StrictMode>` gives us better error reporting by activating additional checks and warnings.
 11. Save your files and visit the browser. You should see "Weather Conditions" displayed.
-12. In VS Code, go back to the file **/src/App.js**.
+12. In VS Code, go back to the file **/src/App.jsx**.
 
 ## Applying CSS Classes
 
@@ -44,10 +44,10 @@ We are going to build a weather-themed React application that demonstrates condi
 
 Let's create components for the three weather conditions: CloudCover, Rain, HotTemperature, and ColdTemperature.
 
-16. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your create-react-app project. Select **New File** and name the file `CloudCover.js`.
-17. Create another file in the same location and name it `Rain.js`.
-18. Create another file in the same location and name it `HotTemperature.js`.
-19. Create another file in the same location and name it `ColdTemperature.js`.
+16. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your React project. Select **New File** and name the file `CloudCover.jsx`.
+17. Create another file in the same location and name it `Rain.jsx`.
+18. Create another file in the same location and name it `HotTemperature.jsx`.
+19. Create another file in the same location and name it `ColdTemperature.jsx`.
 
 #### CloudCover.js
 

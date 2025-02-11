@@ -383,13 +383,13 @@ This section might be easier with a second window of VSCode open. If you're adju
 
 40. In the folder that contains the `server` folder, open the terminal and use command `npx create-react-app client` to build out a basic React app.
 
-41. Use command `cd client` followed by `npm start` to make sure that this works, and that you can see `localhost:3000` in your browser.
+41. Use command `cd client` followed by `npm run dev` to make sure that this works, and that you can see `localhost:5173` in your browser.
 
 42. Shut down the server for now using `ctrl + c`. Use command `npm install react-router-dom axios dotenv` and once it's done, start the server back up with `npm run dev`
 
 We're going to be using `react-router-dom` to manage front-end URL changes
 
-43. Erase what is originally on `App.js` so we can write it ourselves.
+43. Erase what is originally on `App.jsx` so we can write it ourselves.
 
 44. Import useEffect and useState:
 
@@ -441,7 +441,7 @@ export const API_URL = process.env.REACT_APP_API_URL;
 
 This file immediately exports our environment variable. This way, we only import `constants.js` on files where we need the URL.
 
-53. At the top of `App.js`, import the URL:
+53. At the top of `App.jsx`, import the URL:
 
 ```jsx
 import { API_URL } from "./constants";
@@ -449,7 +449,7 @@ import { API_URL } from "./constants";
 
 Now we'll use this URL to make a request to our local server and see if it's being caught on the front-end.
 
-54. At the top of `App.js`, import axios:
+54. At the top of `App.jsx`, import axios:
 
 ```jsx
 import axios from "axios";
@@ -479,7 +479,7 @@ It's also useful to note that the response from axios comes with some meta data,
 
 Once you save the file, check the console in the browser to see the data!
 
-Before we move on to the next step, take a look at what `App.js` should look like so far:
+Before we move on to the next step, take a look at what `App.jsx` should look like so far:
 
 ```jsx
 import React, { useState, useEffect } from "react";
@@ -535,11 +535,11 @@ Also note that the key property inside the `<li>` tag is being passed the charac
 
 ## Scaling the application
 
-Now that our `App.js` is expanding, it's time to start separating our concerns. We want the main `App.js` component to be an overview of the application, and we can have a separate component that will get all of our data and display it.
+Now that our `App.jsx` is expanding, it's time to start separating our concerns. We want the main `App.jsx` component to be an overview of the application, and we can have a separate component that will get all of our data and display it.
 
-57. In the `src` folder, create a file called `AllCharacters.js`
+57. In the `src` folder, create a file called `AllCharacters.jsx`
 
-58. In `AllCharacters.js` import `useState` and `useEffect`:
+58. In `AllCharacters.jsx` import `useState` and `useEffect`:
 
 ```jsx
 import React, { useState, useEffect } from `react`;
@@ -557,7 +557,7 @@ export default AllCharacters;
 
 60. Inside the empty return statement, place a `<ul></ul>` element
 
-61. From `App.js`, cut out the following line of code and move it to `AllCharacters.js` on the inside of the component, above the return statement:
+61. From `App.jsx`, cut out the following line of code and move it to `AllCharacters.jsx` on the inside of the component, above the return statement:
 
 ```jsx
 const [serverData, setServerData] = useState([]);
@@ -565,7 +565,7 @@ const [serverData, setServerData] = useState([]);
 
 The reason for this is because we're going to do the axios call only when this `AllCharacters` component gets rendered, so the data should be received & held on our new component.
 
-62. Cut the following imports from `App.js` and move it into `AllCharacters.js`:
+62. Cut the following imports from `App.jsx` and move it into `AllCharacters.jsx`:
 
 ```jsx
 import { API_URL } from "./constants";
@@ -574,7 +574,7 @@ import axios from "axios";
 
 These imports, as usual, belong on the top of the page.
 
-63. Cut the following `useEffect` from `App.js` and move it into `AllCharacters.js` above the return statement:
+63. Cut the following `useEffect` from `App.jsx` and move it into `AllCharacters.jsx` above the return statement:
 
 ```jsx
 useEffect(() => {
@@ -594,7 +594,7 @@ useEffect(() => {
 
 As we know, because of the empty `[]` as a second argument to `useEffect`, the axios call will happen as soon as the component loads, and holds the data in the `serverData` state variable.
 
-64. Cut the following turnary operator from `App.js` and move it into `AllCharacters.js` inside of the `<ul>` tag:
+64. Cut the following turnary operator from `App.jsx` and move it into `AllCharacters.jsx` inside of the `<ul>` tag:
 
 ```jsx
 {
@@ -606,9 +606,9 @@ As we know, because of the empty `[]` as a second argument to `useEffect`, the a
 }
 ```
 
-Now it will render inside this component instead of in the main `App.js`
+Now it will render inside this component instead of in the main `App.jsx`
 
-The `AllCharacters.js` should now overall look like this:
+The `AllCharacters.jsx` should now overall look like this:
 
 ```jsx
 import React, { useState, useEffect } from "react";
@@ -648,7 +648,7 @@ function AllCharacters() {
 export default AllCharacters;
 ```
 
-And this is what your `App.js` should look like so far:
+And this is what your `App.jsx` should look like so far:
 
 ```jsx
 function App() {
@@ -662,15 +662,15 @@ function App() {
 export default App;
 ```
 
-Now let's display this component through the `App.js` component
+Now let's display this component through the `App.jsx` component
 
-65. At the top of `App.js`, import the component we just created:
+65. At the top of `App.jsx`, import the component we just created:
 
 ```jsx
 import AllCharacters from "./AllCharacters";
 ```
 
-66. In `App.js` under the `<h1>` tag, display the `AllCharacters` component:
+66. In `App.jsx` under the `<h1>` tag, display the `AllCharacters` component:
 
 ```jsx
 return (
@@ -685,7 +685,7 @@ At this point, you should see all the characters listed in the browser!
 
 At this point, we should only render components when the user decides to see it. We will now be applying React Router functionality, so that we can properly link to different components
 
-67. In `index.js`, import BrowserRouter and wrap the `App` component in `BrowserRouter` component tags:
+67. In `main.jsx`, import BrowserRouter and wrap the `App` component in `BrowserRouter` component tags:
 
 ```jsx
 import { BrowserRouter } from "react-router-dom";
@@ -706,13 +706,13 @@ This way, everything in our application is within the context of using BrowserRo
 
 Let's begin by defining some of our routes
 
-68. In `App.js`, first make sure to import `Routes`, `Route` and `Link` at the top:
+68. In `App.jsx`, first make sure to import `Routes`, `Route` and `Link` at the top:
 
 ```jsx
 import { Routes, Route, Link } from "react-router-dom";
 ```
 
-69. As a reminder, the defined routes still belong inside of the return statement on `App.js`. Below the `AllCharacters` component, we can define our routes:
+69. As a reminder, the defined routes still belong inside of the return statement on `App.jsx`. Below the `AllCharacters` component, we can define our routes:
 
 ```jsx
 <Routes>
@@ -740,7 +740,7 @@ import { Routes, Route, Link } from "react-router-dom";
 </nav>
 ```
 
-Overall, your `App.js` should now look like this:
+Overall, your `App.jsx` should now look like this:
 
 ```jsx
 import { Routes, Route, Link } from "react-router-dom";
@@ -772,9 +772,9 @@ Now when you go to the browser, only after you click the link is when the front-
 
 If you notice in the browser's console, you will get a warning that there are no routes that match "/" which is the base URL of our website. Let's build out a `Home` component so that we can toggle back and forth between something like a "landing page" and our list of characters.
 
-71. In the `src` folder, create a file called `Home.js`
+71. In the `src` folder, create a file called `Home.jsx`
 
-72. In `Home.js`, create the following functional component:
+72. In `Home.jsx`, create the following functional component:
 
 ```jsx
 function Home() {
@@ -788,7 +788,7 @@ function Home() {
 export default Home;
 ```
 
-73. In `App.js`, import the `Home` component and create a route and link for it.
+73. In `App.jsx`, import the `Home` component and create a route and link for it.
 
 Here's the import:
 
@@ -894,7 +894,7 @@ Now that the back-end is tested, we just need to add a route to the front-end an
 
 For the user to be able to create a document of data and send it to the database, they will need a form on the front-end. We will create a component that contains that form, and set it up to send a body of data to our server in the same way we just tested it in Postman.
 
-78. In the `src` folder, create a file called `CreateCharacter.js`
+78. In the `src` folder, create a file called `CreateCharacter.jsx`
 
 79. Import `useState`:
 
@@ -948,7 +948,7 @@ When we do something like `onChange={(e) => setCharacter({...character, debutFil
 
 Before we make sure that it works, let's add a route to this component and test our ability to render the form itself.
 
-84. In `App.js`, import the component we just created & define a route that will render this form:
+84. In `App.jsx`, import the component we just created & define a route that will render this form:
 
 Here is the import:
 
@@ -976,13 +976,13 @@ Now test it! Click the "Create a new MCU character" link and see that the form s
 
 The next thing we should do is create a function that makes a POST request to our server and send the form data to the database.
 
-86. Import the API URL at the top of `CreateCharacter.js`:
+86. Import the API URL at the top of `CreateCharacter.jsx`:
 
 ```jsx
 import { API_URL } from "./constants";
 ```
 
-87. In `CreateCharacter.js` above the return statement, create an async function that will post to the database:
+87. In `CreateCharacter.jsx` above the return statement, create an async function that will post to the database:
 
 ```jsx
 async function postCharacter() {
@@ -1060,7 +1060,7 @@ Test this!! Fill out the form, click the button, you should see the form fields 
 
 Now let's modify this to go to a different page once you've created a character.
 
-90. At the top of `CreateCharacter.js`, import `useNavigate`:
+90. At the top of `CreateCharacter.jsx`, import `useNavigate`:
 
 ```jsx
 import { useNavigate } from "react-router-dom";
@@ -1080,7 +1080,7 @@ const navigate = useNavigate();
 navigate("/mcu");
 ```
 
-Overall, your `CreateCharacter.js` should look like this:
+Overall, your `CreateCharacter.jsx` should look like this:
 
 ```jsx
 import React, { useState } from "react";
@@ -1167,9 +1167,9 @@ Test it by adding a new character! When you're done submitting, you should notic
 
 Now that we have half of CRUD functionality completed, let's create a component that will render all the information about one character at a time.
 
-93. In the `src` folder, create a file called `OneCharacter.js`
+93. In the `src` folder, create a file called `OneCharacter.jsx`
 
-94. At the top of `OneCharacter.js`, import `useParams`:
+94. At the top of `OneCharacter.jsx`, import `useParams`:
 
 ```jsx
 import { useParams } from "react-router-dom";
@@ -1205,7 +1205,7 @@ const { name } = useParams();
 
 We will come back and complete this file later. For now, let's just create a route to it.
 
-98. In `App.js`, import and add a route to the `OneCharacter` component:
+98. In `App.jsx`, import and add a route to the `OneCharacter` component:
 
 Here is the import:
 
@@ -1223,7 +1223,7 @@ Now we can render the component. For example, if you go to `localhost:3000/mcu/C
 
 Let's make a small change to the `CreateCharacter` component so that it goes to this component.
 
-99. In `CreateCharacter.js`, update the `navigate` function:
+99. In `CreateCharacter.jsx`, update the `navigate` function:
 
 ```jsx
 navigate(`/mcu/${serverResponse.payload.name}`);
@@ -1288,7 +1288,7 @@ Once it's tested and it's working, it's time to set this up for the front-end
 
 ## Client-side feature: OneCharacter component
 
-104. In `OneCharacter.js`, import `useEffect` and `useState` at the top. Let's also bring in the `API_URL` that we need to contact our back-end server with:
+104. In `OneCharacter.jsx`, import `useEffect` and `useState` at the top. Let's also bring in the `API_URL` that we need to contact our back-end server with:
 
 ```jsx
 import { useState, useEffect } from "react";
@@ -1346,7 +1346,7 @@ This way, when we try to go to `localhost:3000/mcu/Hulk` for example, the text t
 
 Now that it works, let's make sure the list of all characters are also links to their own page.
 
-109. At the top of `AllCharacters.js`, import `Link`:
+109. At the top of `AllCharacters.jsx`, import `Link`:
 
 ```jsx
 import { Link } from "react-router-dom";
@@ -1358,7 +1358,7 @@ import { Link } from "react-router-dom";
 <Link to={`/mcu/${character.name}`}>{character.name}</Link>
 ```
 
-Your `AllCharacters.js` page should now look like this:
+Your `AllCharacters.jsx` page should now look like this:
 
 ```jsx
 import React, { useState, useEffect } from "react";
@@ -1401,7 +1401,7 @@ function AllCharacters() {
 export default AllCharacters;
 ```
 
-Your `OneCharacter.js` should currently look like this:
+Your `OneCharacter.jsx` should currently look like this:
 
 ```jsx
 import { useState, useEffect } from "react";
@@ -1557,7 +1557,7 @@ Before we write any code, let's plan out how this is going to work from the user
 
 These changes will all happen on the `OneCharacter` component
 
-113. In `OneCharacter.js`, write a state variable called `isEditing`:
+113. In `OneCharacter.jsx`, write a state variable called `isEditing`:
 
 ```jsx
 const [isEditing, setIsEditing] = useState(false);
@@ -1851,7 +1851,7 @@ Once it works, let's make it work on the front end
 
 ## D/CRUD - Client-side Delete Functionality
 
-In `OneCharacter.js`, we want the delete to redirect a user back to the list of all characters, so we can see that it's disappeared from the dataset. First let's import `useNavigate` to accomplish this:
+In `OneCharacter.jsx`, we want the delete to redirect a user back to the list of all characters, so we can see that it's disappeared from the dataset. First let's import `useNavigate` to accomplish this:
 
 `import { useParams, useNavigate } from 'react-router-dom'`
 
@@ -1859,7 +1859,7 @@ And make sure to set it up within the functional component:
 
 `const navigate = useNavigate()`
 
-126. In `OneCharacter.js`, write a function called `handleDelete` that will make a fetch request to our server and respond by navigating back to the component that renders all characters:
+126. In `OneCharacter.jsx`, write a function called `handleDelete` that will make a fetch request to our server and respond by navigating back to the component that renders all characters:
 
 ```jsx
 async function handleDelete() {
@@ -1884,7 +1884,7 @@ async function handleDelete() {
 
 Test it!!
 
-Here is what the full `OneCharacter.js` should look like:
+Here is what the full `OneCharacter.jsx` should look like:
 
 ```jsx
 import { useParams, useNavigate } from "react-router-dom";
