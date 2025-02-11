@@ -151,13 +151,9 @@ Implement functionality to toggle between the front and back images when the ima
 ```jsx
 useEffect(() => {
   const fetchPokemonImage = async () => {
-    const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-    );
-    const data = await response.json();
-    setPokemonImage(
-      data.sprites[isFront ? "front_default" : "back_default"]
-    );
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+    const pokemon = await response.json();
+    setPokemonImage(pokemon.sprites[isFront ? "front_default" : "back_default"]);
   };
 
   if (pokemonName) {
