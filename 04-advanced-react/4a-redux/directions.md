@@ -4,7 +4,7 @@ Planned steps for more full version of this lesson:
 
 ### Lifting State and Prop Drilling
 
-- Start with the todos app with todos and preferences state managed in `TodoContainer`.
+- Start with the todos app with todos and username preferences state managed in `TodoContainer`.
 - Lift state to `App`, and drill it down through `TodoContainer`. (Possibly adding it to Footer and Header, if we don't want it already in there.)
 - Discuss the challenge of maintaining this through a larger app. (Possibly include a larger app example to show the challenge here.)
 
@@ -18,6 +18,8 @@ Have them already set up with:
 - an action
 - an initial state
 - the reducer function with a case for that action
+- a dispatcher tied into the action
+- show them the dev tools
 
 ### Reducer
 
