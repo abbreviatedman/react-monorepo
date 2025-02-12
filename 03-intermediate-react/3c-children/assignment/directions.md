@@ -99,13 +99,14 @@ Create a CSS file named `Navbar.css` in the `src` directory and add the followin
 
 ### Step 4: Use the Navbar Component
 
-1. Remove everything from the return statement in your `App.jsx` file.
-2. Remove the imports for the logo and the `App.css` file.
-3. Add a `div` element to the return statement in your `App.jsx` file.
-4. Import the `Navbar` component in your `App` component.
-5. Add the `Navbar` component as a child of the `div` element.
-6. **In the App component's return**, place navigation links as children to the `Navbar` component, using `a` elements with `href` attributes set to `#home`, `#about`, and `#contact`.
-7. Add some placeholder content below the `Navbar` to ensure it's rendering correctly. It should show your placeholder content below the a navbar with the title "Star Wars Data App" and the links.
+1. In `main.jsx`, remove the CSS import.
+2. In `App.jsx`, remove everything from the return statement of the `App` function.
+3. Remove all imports above the `App` function.
+4. Add a `div` element to the return statement.
+5. Import the `Navbar` component in your `App` component.
+6. Add the `Navbar` component as a child of the `div` element.
+7. **In the App component's return**, place navigation links as children to the `Navbar` component, using `a` elements with `href` attributes set to `#home`, `#about`, and `#contact`.
+8. Add some placeholder content below the `Navbar` to ensure it's rendering correctly. It should show your placeholder content below the a navbar with the title "Star Wars Data App" and the links.
 
 **Check:** Verify that the `Navbar` with links is displayed at the top of your app, and the links are styled correctly. Then remove the placeholder content.
 
