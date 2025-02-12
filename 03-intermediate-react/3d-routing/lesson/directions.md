@@ -341,7 +341,7 @@ export default App;
 
 - Test your new URL routes using the navbar.
 - Make sure you test the dynamic route with various params. Use `%20` as a space to test how it would look with spaces!
-- Test `localhost:3000/gibberish` or any other unused URL extension to test the NotFound component.
+- Test `localhost:5173/gibberish` or any other unused URL extension to test the NotFound component.
 
 ##### Nested Routes
 
