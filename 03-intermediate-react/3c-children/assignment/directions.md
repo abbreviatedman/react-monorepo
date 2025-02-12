@@ -106,7 +106,7 @@ Create a CSS file named `Navbar.css` in the `src` directory and add the followin
 5. Import the `Navbar` component in your `App` component.
 6. Add the `Navbar` component as a child of the `div` element.
 7. **In the App component's return**, place navigation links as children to the `Navbar` component, using `a` elements with `href` attributes set to `#home`, `#about`, and `#contact`.
-8. Add some placeholder content below the `Navbar` to ensure it's rendering correctly. It should show your placeholder content below the a navbar with the title "Star Wars Data App" and the links.
+8. Add some placeholder content below the `Navbar` to ensure it's rendering correctly. It should show your placeholder content below the navbar with the title "Star Wars Data App" and the links.
 
 **Check:** Verify that the `Navbar` with links is displayed at the top of your app, and the links are styled correctly. Then remove the placeholder content.
 
