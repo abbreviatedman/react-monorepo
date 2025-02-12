@@ -1,0 +1,21 @@
+.parent-container {
+  padding: 20px;
+  margin: 190px 20px 20px 270px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.data-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: box-shadow 0.3s;
+}
+
+.data-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
