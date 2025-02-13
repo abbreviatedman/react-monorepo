@@ -4,9 +4,9 @@
 
 Create a React application that utilizes React Router to navigate between different pages. The app will include a Home page, an About page, and a Users page that fetches data from an API. You will get further practice setting up routing, navigating between routes, and passing data between components.
 
-### Step 1: Set Up the React Project
+### Step 1: Set Up A New React Project
 
-- Open the terminal to this directory--the simplest way to do so is to right-click on the directory in VS Code and select "Open in Integrated Terminal".
+- Open the terminal to the `exercise` directory--the simplest way to do so is to right-click on the `exercise` folder in VS Code and select "Open in Integrated Terminal".
 
 - In the terminal, type `npm create vite .` and hit enter/return. The `.` is important--this will create a new Vite project in the current directory.
 
@@ -16,17 +16,11 @@ Create a React application that utilizes React Router to navigate between differ
 
 - Install dependencies by entering `npm install` in the terminal.
 
-- Install React Router:
+- Install React Router. In your terminal, type `npm i react-router-dom@6.29.0`. This will install the package into our project.
 
-```bash
-npm install react-router-dom
-```
+- Handle a Vite/React-Router conflict by running `npm dedupe`. This will remove the conflicting package and allow React Router to work properly.
 
 - Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
-
-**Check:** Verify that React Router is listed as a dependency in your `package.json` file.
-
-Once you have installed React Router and confirmed it's in your dependencies, you’re ready to move on to the next step.
 
 ### Step 2: Create the Home Component
 

@@ -18,15 +18,17 @@ In this exercise we will be a space mission website that will inform astronauts 
 
 - Install dependencies by entering `npm install` in the terminal.
 
-- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
+## Install React Router DOM
+
+- Install React Router. In your terminal, type `npm i react-router-dom@6.29.0`. This will install the package into our project.
+
+- Handle a Vite/React-Router conflict by running `npm dedupe`. This will remove the conflicting package and allow React Router to work properly.
 
 ## Install Bootstrap
 
-4. Next let's import Bootstrap a front-end framework that provides CSS code to make our project beautiful. In terminal type `npm i bootstrap@5.2.3`. This will install the package into our project.
+- Next let's import Bootstrap, a front-end framework that provides CSS code to make our project beautiful. In terminal type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
-## Install React Router DOM
-
-5. Import React Router DOM. In terminal type `npm i react-router-dom`. This will install the package into our project.
+- Run the app by typing `npm run dev` in the terminal. This will provide a clickable link to open the app in your default browser, or you can navigate to the localhost URL in your browser.
 
 ## Import Bootstrap
 
