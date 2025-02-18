@@ -1,4 +1,7 @@
 function Preferences() {
+  const view = 'list';
+  const units = 'metric':
+
   function handleToggleView() {
   }
 
