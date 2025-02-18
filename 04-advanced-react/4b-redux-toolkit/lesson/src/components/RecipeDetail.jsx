@@ -4,6 +4,12 @@ import { useParams, useNavigate } from "react-router-dom";
 function RecipeDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const recipe = {
+    id: '1',
+    name: 'Spaghetti Bolognese',
+    ingredients: ['spaghetti', 'minced beef', 'onion', 'garlic', 'tomato sauce', 'olive oil', 'carrot'],
+    category: 'Italian'
+  }
 
   const [editing, setEditing] = useState(false);
 
