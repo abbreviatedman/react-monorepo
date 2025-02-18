@@ -5,8 +5,14 @@ function Preferences() {
   function handleToggleUnits() {
   }
 
+  const preferencesStyle = {
+    display: "flex",
+    gap: "10px",
+    marginBottom: "20px",
+  };
+
   return (
-    <div>
+    <div style={preferencesStyle}>
       <button onClick={handleToggleView}>
         Switch to {view === "list" ? "Grid" : "List"} View
       </button>
