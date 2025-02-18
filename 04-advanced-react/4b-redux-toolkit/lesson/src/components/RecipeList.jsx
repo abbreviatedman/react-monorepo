@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux";
+
 import RecipeItem from "./RecipeItem";
 
 function RecipeList() {
+  const recipes = useSelector((state) => state.recipes);
   const listStyles = {
     display: "flex",
     flexDirection: "column",
@@ -15,7 +18,8 @@ function RecipeList() {
   };
 
   return (
-    <div style={view === "list" ? listStyles : gridStyles}>
+    <div style={gridStyles}>
+      <h1>Recipes</h1>
       {recipes.map((recipe) => (
         <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
           <RecipeItem recipe={recipe} />

@@ -22,7 +22,7 @@ function RecipeDetail() {
   return (
     <div>
       {editing ? (
-        <div>
+        <div style={{display: "flex", flexDirection: "column"}}>
           <input value={name} onChange={(e) => setName(e.target.value)} />
           <button onClick={handleAddIngredient}>Add Ingredient</button>
           {ingredients.map((ingredient, index) => (
