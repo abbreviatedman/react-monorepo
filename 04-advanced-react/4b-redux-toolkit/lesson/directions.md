@@ -18,3 +18,4 @@ You can simply run `npm install`to install the dependencies.
 7. Switch the `RecipeDetail` component to use the `useSelector` hook to get the recipe from the store.
 8. Add a `deleteRecipe` action to the recipes slice.
 9. Add dispatching the `deleteRecipe` action to the `RecipeDetail` component.
+10. Add recipe.

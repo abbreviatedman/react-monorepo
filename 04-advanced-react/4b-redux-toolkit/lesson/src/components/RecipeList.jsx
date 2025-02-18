@@ -21,6 +21,7 @@ const recipes = [
         category: 'Salad'
     },
 ];
+import RecipeForm from "./RecipeForm";
 
 function RecipeList() {
   const listStyles = {
@@ -37,6 +38,8 @@ function RecipeList() {
 
   return (
     <>
+      <h3>Add a recipe</h3>
+      <RecipeForm />
       <h1>Recipes</h1>
       <div style={gridStyles}>
         {recipes.map((recipe) => (

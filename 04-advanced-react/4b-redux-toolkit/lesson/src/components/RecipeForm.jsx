@@ -16,17 +16,22 @@ function RecipeForm() {
     event.preventDefault();
   }
 
+  const formStyles = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '400px',
+    gap: '10px',
+    height: '100%',
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={formStyles}>
       <input
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Recipe Name"
       />
-
-      <button type="button" onClick={handleAddIngredient}>
-        Add Ingredient
-      </button>
 
       {ingredients.map((ingredient, index) => (
         <input
@@ -36,6 +41,10 @@ function RecipeForm() {
           placeholder="Ingredient"
         />
       ))}
+
+      <button type="button" onClick={handleAddIngredient}>
+        Add Ingredient
+      </button>
 
       <button type="submit">Save</button>
     </form>
