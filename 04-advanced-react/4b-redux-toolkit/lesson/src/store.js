@@ -25,7 +25,7 @@ const initialState = {
 
 const recipeSlice = createSlice({
   name: 'recipes',
-  initialState,
+  initialState: initialState.recipes,
 });
 
 const store = configureStore({
