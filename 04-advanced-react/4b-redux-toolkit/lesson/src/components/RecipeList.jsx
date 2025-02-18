@@ -36,14 +36,16 @@ function RecipeList() {
   };
 
   return (
-    <div style={gridStyles}>
+    <>
       <h1>Recipes</h1>
-      {recipes.map((recipe) => (
-        <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
-          <RecipeItem recipe={recipe} />
-        </Link>
-      ))}
-    </div>
+      <div style={gridStyles}>
+        {recipes.map((recipe) => (
+          <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
+            <RecipeItem recipe={recipe} />
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }
 

@@ -3,7 +3,7 @@ function RecipeItem(props) {
 
   const itemStyles = {
     padding: "10px",
-    borderBottom: "1px solid #ddd",
+    border: "1px solid #ddd",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
