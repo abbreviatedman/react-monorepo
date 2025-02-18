@@ -1,10 +1,28 @@
 import { Link } from "react-router-dom";
-import {useSelector} from "react-redux";
-
 import RecipeItem from "./RecipeItem";
 
+const recipes = [
+    {
+        id: '1',
+        name: 'Spaghetti Bolognese',
+        ingredients: ['spaghetti', 'minced beef', 'onion', 'garlic', 'tomato sauce', 'olive oil', 'carrot'],
+        category: 'Italian'
+    },
+    {
+        id: '2',
+        name: 'Chicken Curry',
+        ingredients: ['chicken', 'curry powder', 'onion', 'garlic', 'coconut milk', 'ginger', 'tomato'],
+        category: 'Indian'
+    },
+    {
+        id: '3',
+        name: 'Caesar Salad',
+        ingredients: ['romaine lettuce', 'croutons', 'parmesan cheese', 'chicken breast', 'caesar dressing', 'lemon'],
+        category: 'Salad'
+    },
+];
+
 function RecipeList() {
-  const recipes = useSelector((state) => state.recipes);
   const listStyles = {
     display: "flex",
     flexDirection: "column",
