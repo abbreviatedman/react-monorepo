@@ -257,7 +257,7 @@ export default Character;
 
 ##### Navbar
 
-```
+```js
 import Link from 'next/link';
 
 function Navbar() {
@@ -283,7 +283,7 @@ export default Navbar;
 
 ##### Layout
 
-```
+```js
 import Navbar from './Navbar';
 
 function Layout(props) {
@@ -300,7 +300,7 @@ export default Layout;
 
 ##### About
 
-```
+```js
 function About() {
   return (
     <div>
@@ -315,7 +315,7 @@ export default About;
 
 ##### Contact
 
-```
+```js
 function Contact() {
   return (
     <div>
@@ -330,7 +330,7 @@ export default Contact;
 
 ##### Home
 
-```
+```js
 import Layout from '../components/Layout';
 import Link from 'next/link';
 
