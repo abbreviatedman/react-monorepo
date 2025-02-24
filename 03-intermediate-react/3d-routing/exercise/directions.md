@@ -45,7 +45,6 @@ In this exercise we will be a space mission website that will inform astronauts 
 ## Creating the App Component
 
 10. Open **/src/App.jsx**. This file is an example component that React starts with. You can delete everything in this file. Create the boiler plate code for a functional component called `App`. Don't forget to export it.
-
 ## Adding Custom CSS
 
 11. At the top of file after the React import add `import './App.css';`.
